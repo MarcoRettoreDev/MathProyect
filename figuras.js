@@ -25,16 +25,29 @@ function  areaTriangulo (base, altura)
   return (base * altura) / 2;
 }
 
-function alturaTriangulo(ladoA,ladob,ladobase)
+//lado A y lado B son 2 triangulos iguales (la mitad del triangulo isoceles)
+function alturaTrianguloIsoceles(trianguloGrandeLadoA,trianguloGrandeLadoB,trianguloGrandeLadoBase) 
 {
-  if (ladoA != ladoB)
+  if (trianguloGrandeLadoA != trianguloGrandeLadoB)
   {
     const error = "Both sides has to be same size";
     return error;
   }
   else
   {
-    function alturaTrianguloIso
+    // partimos nuestro triangulo en 2 triangulos isoceles
+    const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+    const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+    
+    //variables al cuadrado
+    const trianguloPequenoLadoBcuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+    const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+    
+    const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBcuadrado);  // calculamos el lado A del triangulo pequeño
+
+
+    const trianguloGrandeAltura = trianguloPequenoLadoA;
+    return trianguloGrandeAltura; //retornamos la altura
   }
 }
 
@@ -73,7 +86,7 @@ function calcularPerimetroCuadrado()
   const perimetro = perimetroCuadrado(value);
 
   const result = document.getElementById('result-square'); // result var
-  result.innerHTML = (perimetro); // print the result
+  result.innerHTML = (`${perimetro} cm`); // print the result
 }
 
 function calcularAreaCuadrado()
@@ -84,7 +97,7 @@ function calcularAreaCuadrado()
 
 
   const result = document.getElementById('result-square'); // result var
-  result.innerHTML = (area); // print the result
+  result.innerHTML = (`${area} cm`); // print the result
 }
 
 function clearSquareResult ()
@@ -106,7 +119,7 @@ function calcularPerimetroTriangulo()
   const perimetrotriangulo = perimetroTriangulo(value1,value2,valuebase);
 
   const result = document.getElementById('result-triangle'); // result var
-  result.innerHTML = (perimetrotriangulo); // print the result
+  result.innerHTML = (`${perimetrotriangulo} cm`); // print the result
 }
 
 function calcularAreaTriangulo()
@@ -119,13 +132,44 @@ function calcularAreaTriangulo()
   const valuebase = parseInt(inputbase.value);
 
   // console.log(value1, value2, valuebase)
-  const altura = alturaTriangulo(value1,value2,valuebase);
+  const altura = alturaTrianguloIsoceles(value1,value2,valuebase);
   const areatriangulo = areaTriangulo(valuebase, altura);
 
-  console.log(altura);
   const result = document.getElementById('result-triangle'); // result var
-  result.innerHTML = (areatriangulo); // print the result
+  result.innerHTML = (`${areatriangulo} CM²`); // print the result
+}
+
+function clearTriangleResult()
+{
+  const result = document.getElementById('result-triangle');
+  result.innerHTML = "";
 }
 
 
+// HTML CIRCLE BUTTONS
+
+function calcularPerimetroCirculo()
+{
+  const inputRadio = document.getElementById('input-circle'); // boton 
+  const value = parseInt(inputRadio.value);
+  const calculoPerimetroCirculo = perimetroCirculo(value);
+  
+  const result = document.getElementById('result-circle'); // result var
+  result.innerHTML = (`${calculoPerimetroCirculo} cm`);
+}
+
+function calcularAreaCirculo()
+{
+  const inputRadio = document.getElementById('input-circle'); // boton 
+  const value = parseInt(inputRadio.value); // pasamo a integer the value
+  const calculoAreaCirculo = areaCirculo(value);
+
+  const result = document.getElementById('result-circle'); // result var
+  result.innerHTML = (`${calculoAreaCirculo} cm`);
+}
+function clearCircleResult()
+{
+  const result = document.getElementById('result-circle');
+  result.innerHTML = "";
+}
 

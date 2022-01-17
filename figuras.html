@@ -72,17 +72,32 @@
         </button>
       </div>
     </form>
+
+    <form action="#" class="circle-card">
+      <div class="input-circle-section">
+        <label for="input-circle">
+          Inserta cuanto mide el RADIO de tu circulo:
+        </label>
+        <input id="input-circle" type="number">
+      </div>
+      <div class="result-circle-field">
+        <p>Solution is:</p>
+        <p id="result-circle"></p>
+      </div>
+      <div class="button-circle-section">
+        <button id="button-circle-perimeter" type="button" onclick="calcularPerimetroCirculo()">
+          Calculate the circumference
+        </button>
+        <button id="button-circle-area" type="button" onclick="calcularAreaCirculo()">
+          Calculate the area
+        </button>
+        <button id="button-circle-clear" type="button" onclick="clearCircleResult()">
+          Reset
+        </button>
+      </div>
+    </form>
     
   </section>
-
-
-
-
-
-
-
-
-
   <script src="./figuras.js"></script>
 </body>
 </html>
