@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométricas | Curso Practico Javascript</title>
+</head>
+<body>
+
+  <header class="header">  
+    <h1> Geometry calculator</h1>
+    <h4> Hi, welcome to my first Javascript proyect!</h4>
+    <h6> Hope you enjoy the app :)</h6>
+  </header>
+
+  <section class="geometry-section">
+    <h2>Hola! ¿Que quieres calcular hoy?</h2>
+
+    <form action="#" class="square-card">
+      <div class="input-square-section">
+        <label for="field">
+          Inserta cuanto mide el lado de tu cuadrado:
+        </label>
+        <input id="input-square" type="number">
+      </div>
+      <div class="result-square-field">
+        <p>Solution is:</p>
+        <p id="result-square"></p>
+      </div>
+      <div class="button-square-section">
+        <button id="button-square-perimeter" type="button" onclick="calcularPerimetroCuadrado()">
+          Calculate the perimeter
+        </button>
+        <button id="button-square-area" type="button" onclick="calcularAreaCuadrado()">
+          Calculate the area
+        </button>
+        <button id="button-square-clear" type="button" onclick="clearSquareResult()">
+          Reset 
+        </button>
+      </div>
+    </form>
+
+    <form action="#" class="triangle-card">
+      <div class="input-tringle-section">
+        <label for="field">
+          Inserta cuanto mide el lado1 de tu triangulo:
+        </label>
+        <input id="input-side-1" type="number">
+        <label for="field">
+          Inserta cuanto mide el lado2 de tu triangulo:
+        </label>
+        <input id="input-side-2" type="number">
+        <label for="field">
+          Inserta cuanto mide la base de tu triangulo:
+        </label>
+        <input id="input-base" type="number">
+      </div>
+      <div class="result-triangle-field">
+        <p>Solution is:</p>
+        <p id="result-triangle"></p>
+      </div>
+      <div class="button-triangle-section">
+        <button id="button-triangle-perimeter" type="button" onclick="calcularPerimetroTriangulo()">
+          Calculate the perimeter
+        </button>
+        <button id="button-triangle-area" type="button" onclick="calcularAreaTriangulo()">
+          Calculate the area
+        </button>
+        <button id="button-triangle-clear" type="button" onclick="clearTriangleResult()">
+          Reset
+        </button>
+      </div>
+    </form>
+    
+  </section>
+
+
+
+
+
+
+
+
+
+  <script src="./figuras.js"></script>
+</body>
+</html>
