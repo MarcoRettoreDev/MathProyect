@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porcentajes y descuentos | Curso Práctico de JS</title>
+</head>
+<body>
+  <header class="header-discount">  
+    <h1> Discounts calculator</h1>
+    <h4> Hope you enjoy the app :)</h4>
+  </header>
+  <section class="discount-section">
+    <form action="#">
+      <div class="input-discount-section">
+        <label for="input-price">Insert the original price</label>
+        <input type="number" id="input-price" placeholder="Example: 100 u$d">
+        <label for="input-discount">Insert the % to discount</label>
+        <input type="number" id="input-discount" oninput="calcularPrecioConDescuento()" placeholder="Example: 15%">
+      </div>
+      <div class="result-discount-field">
+        <p>Discounted price:</p>
+        <p id="result-discount"></p>
+      </div>
+      <div>
+        <button type="button" id="result-" onclick="clearDiscount()">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="./discounts.js"></script>
+</body>
+</html>
