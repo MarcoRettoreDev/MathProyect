@@ -15,3 +15,10 @@
  - Segundo paso: implementar la fórmula en js.
  - Tercer paso: cercar funciones.
  - Cuarto paso: integrar JS con HTML.
+
+ ## Taller #3: Estadísticas: promedio, mediana y mode.
+
+ - Primer paso: definir las fórmulas.
+ - Segundo paso: implementar la fórmula en js.
+ - Tercer paso: cercar funciones.
+ - Cuarto paso: integrar JS con HTML.
