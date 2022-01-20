@@ -48,54 +48,33 @@ function calcularMediana(lista)
   }
 }
 
-const lista = 
-[
-  1,
-  2,
-  3,
-  3,
-  3,
-  8,
-  72,
-  32,
-  3,
-  10,
-  11,
-  11,
-  21,
-  5,
-  5,
-  6,
-  17,
-  16
-];
 
-const lista1Count = {};
+// MODA
 
-// MODA EDITING
-calcularModa(lista)
-function calcularModa(lista)
+function calculateMode(list)
 {
-  lista.map((elemento)=>
+  const listObj = {};
+  list.map((e)=>
   {
-    const nueva = lista[elemento];
-    // console.log(nueva);
-    console.log([elemento])
-    if (lista1Count[elemento])
+    if(listObj[e])
     {
-      lista1Count[elemento] =+ 1;
-      console.log(lista1Count)
+      listObj[e] += 1;
     }
     else
     {
-      lista1Count[elemento] = 1;
+      listObj[e] = 1;
     }
   });
 
+  const listArray = Object.entries(listObj).sort((eA,eB)=>
+  {
+    return eA[1] - eB[1];
+  });
 
-
-
-  // console.log(listaArray)
+  const moda = listArray[listArray.length - 1];
+  const result = (`La MODA es: ${moda[0]} ,que se repite ${moda[1]} veces dentro de la lista.`);
+  return moda;
 }
-
+// returns an array with two index: 0 is the index of the mode, and 1 is the index of the repeats
+// inside the array.
 
