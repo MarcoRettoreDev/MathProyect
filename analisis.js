@@ -1,16 +1,12 @@
-// PROMEDIO (MEDIA ARITMETICA)
-
-function mediaAritmetica (lista)
+// Lista de salarios:
+const salariosArg= argentina.map((elem)=>
 {
-  const sumaLista = lista.reduce((acc = 0, elem)=>
-    {
-      return acc + elem;
-    });
-  const promedioLista = sumaLista / lista.length;
-  return promedioLista;
-}
+  return elem.salary;
+});
 
-// MEDIANA
+const salariosArgSorted =  salariosArg.sort((a ,b)=>(a - b));
+
+// Helpers
 
 function esPar(lista)
 {
@@ -24,6 +20,8 @@ function esPar(lista)
     return false;
   }
 }
+
+// Cáculo de mediana
 
 function calcularMediana(lista)
 {
@@ -44,33 +42,25 @@ function calcularMediana(lista)
   }
 }
 
-
-// MODA
-
-function calculateMode(list)
+function mediaAritmetica (lista)
 {
-  const listObj = {};
-  list.map((e)=>
-  {
-    if(listObj[e])
+  const sumaLista = lista.reduce((acc = 0, elem)=>
     {
-      listObj[e] += 1;
-    }
-    else
-    {
-      listObj[e] = 1;
-    }
-  });
-
-  const listArray = Object.entries(listObj).sort((eA,eB)=>
-  {
-    return eA[1] - eB[1];
-  });
-
-  const moda = listArray[listArray.length - 1];
-  const result = (`La MODA es: ${moda[0]} ,que se repite ${moda[1]} veces dentro de la lista.`);
-  return moda;
+      return acc + elem;
+    });
+  const promedioLista = sumaLista / lista.length;
+  return promedioLista;
 }
-// returns an array with two index: 0 is the index of the mode, and 1 is the index of the repeats
-// inside the array.
 
+
+// Mediana general
+const medianaGeneralArg = calcularMediana(salariosArg);
+
+// Mediana del top 10%
+
+const spliceStart = (salariosArgSorted.length * 90) / 100; // calculamos el 90% de nuestra lista
+const spliceCount = salariosArgSorted.length - spliceStart; // guardamos el 10% restante
+
+const salariosArgTop10 = salariosArgSorted.splice(spliceStart ,spliceCount); // cortamos una nueva lista
+
+const medianaTop10Arg = calcularMediana(salariosArgTop10); // calculamos la mediana en una nueva lista
