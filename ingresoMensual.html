@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <title>Calculo de ingresos y gastos | Curso Practico Javascript</title>
+</head>
+<body>
+
+  <header class="header">  
+    <h1> Income and expense calculator</h1>
+  </header>
+
+  <section class="calculator-section">
+    <form action="#" class="calculator-card">
+
+      <div class="income-field">
+        <div id="income-field-id">
+          <p>Income:</p>
+          <div class="income-line">
+            <p>$3000</p>
+            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
+          </div>
+          <div class="income-line">
+            <p>$250</p>
+            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
+          </div>
+          <div class="income-line">
+            <p>$175</p>
+            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
+          </div>
+          <div>
+            <p>Total: $3425</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="expense-field">
+        <div id="expense-field-id">
+          <p>Expense:</p>
+          <p></p>
+          <div>
+            <p>Total: $2565</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="balance-field">
+        <p>Balance:</p>
+        <p>$ 860</p>
+      </div>
+
+      <div class="button-square-section">
+        <button id="button-add-income" class = "primary-button" type="button" onclick="">
+          ADD INCOME
+        </button>
+        <button id="button-add-expense" class = "primary-button" type="button" onclick="">
+          ADD EXPENSE
+        </button>
+      </div>
+    </form>
+    <script src="./ingresoMensual.js"></script>
+</body>
+</html>

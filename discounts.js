@@ -1,6 +1,7 @@
 
 function calcularPrecioConDescuento()
 {
+  // traemos los elementos y valores al JS
   const inputPrice = document.getElementById('input-price');
   const inputDiscount = document.getElementById('input-discount');
 
