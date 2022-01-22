@@ -1,0 +1,136 @@
+:root
+{
+  /* COLORES */
+  --basic-color: #f0f0f0;
+  --text-input-field: #d4d4d4;
+  --white: #ffffff;
+  --black:#000000;
+  --orange:#c0741d;
+  --light-dark: #545557bb;
+  --transparent: transparent;
+
+  /* BACKGROUND */
+  --background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(9,9,9,1) 41%, rgba(22,22,22,1) 55%, rgba(25,25,25,1) 71%, rgba(29,29,29,1) 85%, rgba(50,50,50,1) 100%, rgba(68,68,68,1) 100%);
+
+  
+  /* FUENTES */
+  --body-font : 'Roboto', sans-serif;
+  --title-font : 'Quicksand', sans-serif;
+
+  /* Max Width del content en desktop */
+  --max-width          : 1200px;
+
+  /* TAMAÑOS */
+  --header-height      : 3rem;
+  --section-spacing    : 4rem;
+  --block-spacing      : 2rem;
+  --body-line-height   : 1.6;
+  --title-line-height  : 1.4;
+
+  /* CARDS */
+  --card-size: 240px;
+
+  /* TAMAÑOS DE FUENTES */
+  --h1-font-size       : 2rem;
+  --h2-font-size       : 1.5rem;
+  --h3-font-size       : 1.25rem;
+  --h4-font-size       : 1rem;
+  --big-font-size      : 1rem;
+  --normal-font-size   : 0.875rem;
+  --small-font-size    : 0.75rem;
+  --smaller-font-size  : 0.6875rem;
+
+  /* CAPAS */
+  --z-back             : -10;
+  --z-normal           : 1;
+  --z-front            : 10;
+  --z-tooltip          : 20;
+  --z-overlay          : 30;
+  --z-modal            : 40;
+  --z-fixed            : 50;
+  --z-off-canvas       : 100;
+
+  /* OTROS */
+  --border-radius : 0.5rem;
+  --box-shadow : 0px 1px 5px rgba(248, 248, 248, 0.39);
+  --primary-button-width: 150px;
+  --primary-button-height: 50px;
+}
+
+
+@media screen and (min-width: 1024px)
+{
+  /* VARIABLES DE TAMAÑO DESKTOP */
+  :root
+  {
+    --header-height     : 4rem;
+    --section-spacing   : 8rem;
+    --block-spacing     : 3rem;
+    --h1-font-size      : 3rem;
+    --h2-font-size      : 2rem;
+    --h3-font-size      : 1.5rem;
+    --h4-font-size      : 1.25rem;
+    --big-font-size     : 1rem;
+    --normal-font-size  : 1rem;
+    --small-font-size   : 0.875rem;
+    --smaller-font-size : 0.75rem;
+  }
+}
+
+/* Configuración general */
+
+html
+{
+  height: 100vh;
+}
+
+body
+{
+  min-height: calc(100vh - var(--header-height));
+  background: var(--background);
+  display:grid;
+  place-items: center;
+}
+
+
+/* Textos */
+
+h1, h2 ,h3 ,h4 ,h5 ,h6
+{
+  color:var(--basic-color);
+}
+
+p
+{
+  color:var(--basic-color);
+}
+
+.title
+{
+  color:var(--basic-color);
+}
+
+.subtitle
+{
+  color:var(--text-input-field);
+}
+
+.text
+{
+  color:var(--basic-color);
+}
+
+/* BOTONES */
+
+.primary-button
+{
+  display:inline-block;
+  width: var(--primary-button-width);
+  height: var(--primary-button-height);
+  padding: .5em 1em;
+  background-color: var(--transparent);
+  color: var(--basic-color);
+  border: .75px solid var(--text-input-field);
+  box-shadow: var(--box-shadow);
+  font-family: var(--title-font);
+}
