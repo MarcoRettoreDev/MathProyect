@@ -10,29 +10,46 @@
 </head>
 <body>
 
-  <header class="header">  
-    <h1> Income and expense calculator</h1>
+  <header class="header">
+    <div class="logo-container">
+      <img src="./images/logo demo.png" alt="">
+    </div>
+    <figure class="menu-icon">
+      <a href="#"><img src="./icons/icons8-menu-48.png" alt=""></a>
+    </figure>
+    <nav class= "navbar">
+      <ol>
+        <li>
+          <a href="/figuras.html"> Figuras Geométricas</a>
+        </li>
+        <li>
+          <a href="/promedio.html"> Promedios</a>
+        </li>
+        <li>
+          <a href="/discounts.html"> Descuentos</a>
+        </li>
+        <li>
+          <a href="/salarios.html"> Salarios</a>
+        </li>
+        <li>
+          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+        </li>
+      </ol>
+    </nav>
   </header>
-
+  
   <section class="calculator-section">
+    <h1 class="title"> Income and expense calculator</h1>
     <form action="#" class="calculator-card">
 
       <div class="income-field">
         <div id="income-field-id">
-          <p>Income:</p>
-          <div class="income-line">
-            <p>$3000</p>
-            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
+          <h3 class="h3">Incomes:</h3>
+          <div class="income-line" id="income-line">
+              <p>$3000</p>
+              <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana" onclick="">
           </div>
-          <div class="income-line">
-            <p>$250</p>
-            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
-          </div>
-          <div class="income-line">
-            <p>$175</p>
-            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana">
-          </div>
-          <div>
+          <div class="income-total-field">
             <p>Total: $3425</p>
           </div>
         </div>
@@ -40,26 +57,40 @@
 
       <div class="expense-field">
         <div id="expense-field-id">
-          <p>Expense:</p>
-          <p></p>
-          <div>
+          <h3 class="h3">Expenses:</h3>
+          <div class="expense-line" id="expense-line">
+            <p>$1000</p>
+            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana" onclick="">
+          </div>
+          <div class="expense-total-field">
             <p>Total: $2565</p>
           </div>
         </div>
       </div>
 
-      <div class="balance-field">
-        <p>Balance:</p>
-        <p>$ 860</p>
+      <div class="balance-input-section">
+        <div class="balance-field">
+          <p>Balance: </p>
+          <p> $ 860</p>
+        </div>
+        <div class="input-calculator-field">
+          <input type="number" id="input-calculator-field" placeholder="0" onkeypress="">
+        </div>
       </div>
 
-      <div class="button-square-section">
+      <div class="button-calculator-section">
         <button id="button-add-income" class = "primary-button" type="button" onclick="">
           ADD INCOME
         </button>
         <button id="button-add-expense" class = "primary-button" type="button" onclick="">
           ADD EXPENSE
         </button>
+      </div>
+
+      <div id="modal-calculator" class="modal">
+        <div class="modal-content">
+          <span class="modal-close">&times; </span>
+        </div>
       </div>
     </form>
     <script src="./ingresoMensual.js"></script>

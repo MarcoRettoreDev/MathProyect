@@ -1,35 +1,74 @@
 // Variables
 
 let ingresoTotal = [0];
-let gastoFijo = [0];
-let gastoVariable = [0];
+let gasto = [0];
+// let gastoVariable = [0];
+
 
 // Funciones para agregar valores
-
 function nuevoIngreso (monto)
 {
   ingresoTotal.push(monto);
+  const container = document.getElementById('income-field-id'); // Div container
+  const div = document.createElement('div') // creamos un nuevo elemento div
+  const img = document.createElement('img') // creamos elemento img
+
+  // div
+  div.setAttribute('class', 'income-line'); // añadimos los atributos DIV
+  div.setAttribute('id', 'income-line')
+  container.append(div); // pegamos el DIV como primer hijo del container
+  // p
+  const p = document.createElement('p') // creamos un nuevo elemento p
+  p.textContent = monto; // añadimos el texto al elemento p
+  // img
+  img.setAttribute('type', 'image'); // atributos img
+  img.setAttribute('class', 'btn-close'); 
+  img.setAttribute('src', './icons/icon_close.png');
+  img.setAttribute('onclick', 'test()');
+  
+  div.appendChild(p); // agregamos el hijo a nuestra lista
+  div.appendChild(img);
 };
 
-function nuevoGastoFijo (monto) 
+function nuevoGasto (monto) 
 {
-  gastoFijo.push(monto);
+  gasto.push(monto);
+  const container = document.getElementById('expense-field-id'); 
+  const div = document.createElement('div') 
+  const img = document.createElement('img') 
+
+
+  div.setAttribute('class', 'income-line');
+  div.setAttribute('id', 'income-line')
+  container.append(div); 
+
+  const p = document.createElement('p') 
+  p.textContent = monto; 
+
+  img.setAttribute('type', 'image'); 
+  img.setAttribute('class', 'btn-close'); 
+  img.setAttribute('src', './icons/icon_close.png');
+  img.setAttribute('onclick', 'test()');
+  
+  div.appendChild(p); 
+  div.appendChild(img);
 };
 
-function nuevoGastoVariable(monto)
-{
-  gastoVariable.push(monto);
-};
+// function nuevoGastoVariable(monto)                           PROXIMAMENTE
+// {
+//   parseInt(monto);
+//   gastoVariable.push(monto);
+// };
+
+
 
 // Funciones para sumar
-
 const suma = (a ,b) => a + b;
 
-function sumarGastos() // suma los gastos fijos con los variables
+function sumarGastos()
 {
-  let fijos = gastoFijo.reduce((a ,b) => a + b);
-  let variables = gastoVariable.reduce((a ,b) => a + b);
-  return fijos + variables;
+  let resultado = gasto.reduce((a ,b)=> a + b);
+  return resultado;
 };
 
 function sumarIngresos()
@@ -42,20 +81,20 @@ function sumarIngresos()
 
 // Funciones para restar
 
-function borrarIngreso(monto)
+function borrarIngreso()
 {
   ingresoTotal.pop()
 };
 
-function borrarGastoFijo(monto)
+function borrarGasto()
 {
   gastoFijo.pop();
 };
 
-function borrarGastoVariable(monto)
-{
-  gastoVariable.pop();
-};
+// function borrarGastoVariable()                           PROXIMAMENTE
+// {
+//   gastoVariable.pop();
+// };
 
 // Funcion balance
 
@@ -75,6 +114,20 @@ const calcularPorcentaje = (ingresos, gastos) =>
 };
 
 
-nuevoIngreso(1000);
-nuevoGastoFijo(200);
-nuevoGastoVariable(100);
+// HTML INPUTS
+
+var modal = document.getElementById("modal-calculator"); // MODAL
+var btnAddIncome = document.getElementById("button-add-income"); // ADD INCOME
+var btnAddExpense = document.getElementById("button-add-expense");// ADD EXPENSE
+var btnSend = document.getAnimations("modal-send");
+var span = document.getElementsByClassName("modal-close")[0]; // span to close the modal
+var input = Number(document.getElementById("input-calculator-field").value); // input
+
+// HTML ACTIONS
+
+btnAddIncome.onclick = () =>  nuevoIngreso (input);
+btnAddExpense.onclick = () => nuevoGasto (input); 
+span.onclick = () => modal.style.display = "none";
+
+
+const test = () => alert("FALTA PODER QUITAR ELEMENTOS CON EVENTO");
