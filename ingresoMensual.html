@@ -15,10 +15,27 @@
       <img src="./images/logo demo.png" alt="">
     </div>
     <figure class="menu-icon">
-      <a href="#"><img src="./icons/icons8-menu-48.png" alt=""></a>
+      <img src="./icons/icons8-menu-48.png" alt="menu-burger" id="menu-burger">
     </figure>
-    <nav class= "navbar">
-      <ol>
+    <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
+      <ol class="navbar-content">
+        <li>
+          <a href="/figuras.html"> Home</a>
+        </li>
+        <li>
+          <a href="/promedio.html"> Proyects</a>
+        </li>
+        <li>
+          <a href="/salarios.html"> About me</a>
+        </li>
+        <li>
+          <a href="/ingresoMensual.html"> Contact</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </nav>
+    <div class="menu-wrapper">
+      <ol class="menu-content">
         <li>
           <a href="/figuras.html"> Figuras Geométricas</a>
         </li>
@@ -34,8 +51,9 @@
         <li>
           <a href="/ingresoMensual.html"> Ingreso Mensual</a>
         </li>
+        <span class="menu-close">&times; </span>
       </ol>
-    </nav>
+    </div>
   </header>
   
   <section class="calculator-section">
@@ -44,37 +62,35 @@
 
       <div class="income-field">
         <div id="income-field-id">
-          <h3 class="h3">Incomes:</h3>
-          <div class="income-line" id="income-line">
-              <p>$3000</p>
-              <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana" onclick="">
-          </div>
           <div class="income-total-field">
-            <p>Total: $3425</p>
+          <h3 class="h3">Incomes:</h3>
+            <div class="income-total">
+              <p>Total:</p>
+              <p id="income-total-field">0</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="expense-field">
         <div id="expense-field-id">
-          <h3 class="h3">Expenses:</h3>
-          <div class="expense-line" id="expense-line">
-            <p>$1000</p>
-            <img class="btn-close" src="./icons/icon_close.png" alt="Boton cerrar ventana" onclick="">
-          </div>
           <div class="expense-total-field">
-            <p>Total: $2565</p>
+            <h3 class="h3">Expenses:</h3>
+            <div class="expense-total">
+              <p>Total:</p>
+              <p id="expense-total-field">0</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="balance-input-section">
         <div class="balance-field">
-          <p>Balance: </p>
-          <p> $ 860</p>
+          <h3 class="h3">Balance: </h3>
+          <p id="balance-total-field"></p>
         </div>
         <div class="input-calculator-field">
-          <input type="number" id="input-calculator-field" placeholder="0" onkeypress="">
+          <input type="text" id="input-calculator-field" placeholder="0" onkeypress="input()">
         </div>
       </div>
 
@@ -87,11 +103,6 @@
         </button>
       </div>
 
-      <div id="modal-calculator" class="modal">
-        <div class="modal-content">
-          <span class="modal-close">&times; </span>
-        </div>
-      </div>
     </form>
     <script src="./ingresoMensual.js"></script>
 </body>
