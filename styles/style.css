@@ -24,7 +24,8 @@
 
   /* TAMAÑOS */
   --header-height      : 4rem;
-  --section-spacing    : 2rem;
+  --footer-height:     : 1rem;
+  --section-spacing    : 3rem;
   --block-spacing      : 2rem;
   --body-line-height   : 1.6;
   --title-line-height  : 1.4;
@@ -58,6 +59,7 @@
   --primary-button-width: 150px;
   --primary-button-height: 50px;
   --line-item-width: 100px;
+  --content-spacing: 24px;
 }
 
 
@@ -67,6 +69,7 @@
   :root
   {
     --header-height     : 6rem;
+    --footer-height:    : 4rem;
     --section-spacing   : 4rem;
     --block-spacing     : 3rem;
     --h1-font-size      : 3rem;
@@ -79,6 +82,7 @@
     --smaller-font-size : 0.75rem;
     --max-width         : 1024px;
     --content-spacing   : 36px;
+    
   }
 }
 
@@ -306,6 +310,14 @@ p
   flex-direction: column;
 }
 
+@media screen and (min-width: 810px)
+{
+  .calculator-section
+  {
+    margin-top: var(--section-spacing);
+  }
+}
+
 @media screen and (min-width: 1024px)
 {
   .calculator-section
@@ -411,6 +423,15 @@ p
   margin-bottom: 12px;     /* SEPARACION ENTRE SECCIONES */
   height: 200px;
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 810px)
+{
+  .expense-field
+  {
+    height: 300px;
+    margin-bottom: var(--content-spacing);
+  }
 }
 
 @media screen and (min-width:1024px)
@@ -524,7 +545,7 @@ p
   display:flex;
   justify-content: flex-start;
   align-items:center;
-  margin-left: 32px;
+  margin-left: 16px;
 }
 
 .balance-field h3 /* palabra balance: */
@@ -551,6 +572,14 @@ p
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 810px)
+{
+  .button-calculator-section
+  {
+    margin-top: var(--content-spacing);
+  }
 }
 
 @media screen and (min-width: 1024px)
@@ -641,3 +670,61 @@ p
   cursor: pointer;
 }
 
+/* FOOTER */
+
+.footer-wrapper
+{
+  display:block;
+}
+
+.footer-text
+{
+  color: var(--basic-color);
+  font-family: var(--title-font);
+  font-weight: 300;
+  margin: 12px 0px;
+}
+
+.footer-content
+{
+  color: var(--basic-color);
+  font-family: var(--title-font);
+  font-weight: 300;
+  display:none;
+}
+
+@media screen and (min-width: 810px)
+{
+  .footer-content
+  {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-content a img
+  {
+    height: 40px;
+    margin-right: 16px
+  }
+}
+
+
+@media screen and (min-width: 1024px)
+{
+  .footer-wrapper
+  {
+    display:flex;
+    justify-content: center;
+    margin-top: var(--content-spacing)
+  }
+  .footer-content
+  {
+    margin-left: 120px
+  }
+
+  .footer-content a img
+  {
+    margin-right: 32px;
+  }
+}
