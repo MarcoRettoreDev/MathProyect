@@ -4,11 +4,136 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <title>Calculo de ingresos y gastos | Curso Practico Javascript</title>
 </head>
 <body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="./images/logo demo.png" alt="">
+    </div>
+    <figure class="menu-icon">
+      <img src="./icons/icons-menu-48.png" alt="menu-burger" id="menu-burger">
+    </figure>
+    <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
+      <ol class="navbar-content">
+        <li>
+          <a href="/"> Home</a>
+        </li>
+        <li>
+          <a href="/proyects.html"> Proyects</a>
+        </li>
+        <li>
+          <a href="/about.html"> About me</a>
+        </li>
+        <li>
+          <a href="/contact.html"> Contact</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </nav>
+    <div class="menu-wrapper">
+      <ol class="menu-content">
+        <li>
+          <a href="/figuras.html"> Figuras Geométricas</a>
+        </li>
+        <li>
+          <a href="/promedio.html"> Promedios</a>
+        </li>
+        <li>
+          <a href="/discounts.html"> Descuentos</a>
+        </li>
+        <li>
+          <a href="/salarios.html"> Salarios</a>
+        </li>
+        <li>
+          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </div>
+  </header>
   
-  <script src="./salarios.js"></script>
+  <section class="salary-section">
+    <div class="text-container">
+      <h1 class="title"> Mean, median & mode </h1>
+      <h2 class="subtitle"> Mean vs Median</h2>
+      <h2 class="subtitle">What's the difference?</h2>
+      <p>Both are measures of where the center of a data set lies (called “Central Tendency” in stats), but they are usually different numbers. For example, take this list of numbers: 10, 10, 20, 40, 70. </p>
+      <p><strong> The mean (informally, the “average“) is found by adding all of the numbers together and dividing by the number of items in the set:</strong> 10 + 10 + 20 + 40 + 70 / 5 = 30.
+      The median is found by ordering the set from lowest to highest and finding the exact middle. 
+      <strong>The median is just the middle number: 20.</strong></p>
+      <p><strong>The mode </strong>is the most common number in a set. For example, the mode in this set of numbers is 21:
+        21, 21, 21, 23, 24, 26, 26, 28</p>
+    </div>
+    <div class="list-field">
+      <h2 class="subtitle">Add a list:</h2>
+      <form action="#" class="list-form">
+          <div class="insert-container">
+            <div class="input-list-container">
+              <label for="salary">Insert salary</label>
+              <input id="salary-input" type="number" id="salary" placeholder="$">
+            </div>
+            <div class="buttons-list-container">
+              <button id="add-list" class="send-button" type="button" onclick="newItemList(salaryInput ,list)">Add to list</button>
+              <button id="clear-list" class="send-button clear-button" type="button" onclick="clearList(list)">Clear list</button>
+            </div>
+          </div>
+          <div>
+            <p id="list-added"></p>
+          </div>
+      </form>
+      <div class="buttons-list">
+        <button id="mean-button" class="button-mean button-salary" onclick="mediaAritmetica(list)">Mean</button>
+        <button id="median-button" class="button-media button-salary" onclick="calcularMediana(list)">Median</button>
+        <button id="mode-button" class="button-mode button-salary" onclick="calculateMode(list)">Mode</button>
+      </div>
+      <div class="result-field">
+        <p id="mean-result"></p>
+        <p id="media-result"></p>
+        <p id="mode-result"></p>
+      </div>
+    </div>
+    <div>
+      <h2 class="subtitle"> Here is an example list:</h2>
+      <div class="example-field">
+        <div>
+          <p>salary: 1450</p>
+          <p>salary: 1800</p>
+          <p>salary: 1400</p>
+          <p>salary: 1350</p>
+          <p>salary: 7400</p>
+          <p>salary: 4250</p>
+          <p>salary: 2400</p>
+          <p>salary: 2000</p>
+          <p>salary: 1650</p>
+          <p>salary: 2430</p>
+        </div>
+        <div>
+          <p>salary: 4800</p>
+          <p>salary: 5600</p>
+          <p>salary: 3200</p>
+          <p>salary: 5100</p>
+          <p>salary: 3100</p>
+          <p>salary: 2000</p>
+          <p>salary: 3420</p>
+          <p>salary: 2140</p>
+          <p>salary: 2000</p>
+          <p>salary: 100000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-wrapper">
+    <h4 class="footer-text">Copyright © Mr. Dev 2022 </h4>
+    <div class="footer-content">
+      <a href="mailto: marcorettoremattes@gmail.com" subject="subject text"><img src="./icons/icons-email-send-80.png" alt="Email send icon"></a>
+      <a href="https://www.linkedin.com/in/marco-antonio-rettore-mattes/"><img src="./icons/icons-linkedin-60.png" alt="Linkedin icon"></a>
+      <a href="https://github.com/marc0147" target="_blank"><img src="./icons/icons-github-60.png" alt="Github icon"></a>
+    </div>
+  </footer>
+  <script src="./ingresoMensual.js"></script>
   <script src="./analisis.js"></script>
 </body>
 </html>
