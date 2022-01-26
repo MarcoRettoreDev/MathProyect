@@ -39,13 +39,10 @@
           <a href="/figuras.html"> Figuras Geométricas</a>
         </li>
         <li>
-          <a href="/promedio.html"> Promedios</a>
+          <a href="/promedios.html"> Promedios</a>
         </li>
         <li>
           <a href="/discounts.html"> Descuentos</a>
-        </li>
-        <li>
-          <a href="/salarios.html"> Salarios</a>
         </li>
         <li>
           <a href="/ingresoMensual.html"> Ingreso Mensual</a>
@@ -68,12 +65,12 @@
         21, 21, 21, 23, 24, 26, 26, 28</p>
     </div>
     <div class="list-field">
-      <h2 class="subtitle">Add a list:</h2>
+      <h2 class="subtitle">Create a new list:</h2>
       <form action="#" class="list-form">
           <div class="insert-container">
             <div class="input-list-container">
               <label for="salary">Insert salary</label>
-              <input id="salary-input" type="number" id="salary" placeholder="$">
+              <input id="salary-input" type="number" id="salary" placeholder="$" onKeyPress="if (event.which == 13) return false;">
             </div>
             <div class="buttons-list-container">
               <button id="add-list" class="send-button" type="button" onclick="newItemList(salaryInput ,list)">Add to list</button>
@@ -81,6 +78,7 @@
             </div>
           </div>
           <div>
+            <p>Your list items are: </p>
             <p id="list-added"></p>
           </div>
       </form>
@@ -96,32 +94,53 @@
       </div>
     </div>
     <div>
-      <h2 class="subtitle"> Here is an example list:</h2>
+      <h2 class="subtitle"> Here is an example list</h2>
       <div class="example-field">
-        <div>
-          <p>salary: 1450</p>
-          <p>salary: 1800</p>
-          <p>salary: 1400</p>
-          <p>salary: 1350</p>
-          <p>salary: 7400</p>
-          <p>salary: 4250</p>
-          <p>salary: 2400</p>
-          <p>salary: 2000</p>
-          <p>salary: 1650</p>
-          <p>salary: 2430</p>
-        </div>
-        <div>
-          <p>salary: 4800</p>
-          <p>salary: 5600</p>
-          <p>salary: 3200</p>
-          <p>salary: 5100</p>
-          <p>salary: 3100</p>
-          <p>salary: 2000</p>
-          <p>salary: 3420</p>
-          <p>salary: 2140</p>
-          <p>salary: 2000</p>
-          <p>salary: 100000</p>
-        </div>
+        <p>4584</p>
+        <p>4894</p>
+        <p>2634</p>
+        <p>2356</p>
+        <p>1524</p>
+        <p>1663</p>
+        <p>5420</p>
+        <p>2560</p>
+        <p>2500</p>
+        <p>1640</p>
+        <p>2000</p>
+        <p>2050</p>
+        <p>3120</p>
+        <p>3420</p>
+        <p>3650</p>
+        <p>3751</p>
+        <p>2640</p>
+        <p>1640</p>
+        <p>2540</p>
+        <p>2650</p>
+        <p>5321</p>
+        <p>6640</p>
+        <p>7540</p>
+        <p>2540</p>
+        <p>2310</p>
+        <p>3501</p>
+        <p>2650</p>
+        <p>6540</p>
+        <p>5810</p>
+        <p>2650</p>
+        <p>3560</p>
+        <p>3620</p>
+        <p>6402</p>
+        <p>2540</p>
+        <p>2650</p>
+        <p>2635</p>
+        <p>3520</p>
+        <p>3640</p>
+        <p>3102</p>
+        <p>3350</p>
+        <p>3560</p>
+        <p>3674</p>
+        <p>4985</p>
+        <p>6520</p>
+        <p>6520</p>
       </div>
     </div>
   </section>

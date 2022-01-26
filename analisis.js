@@ -11,7 +11,7 @@ function newItemList (salaryInput ,list)
 {
   list.push(Number(salaryInput.value));
   const listAdded = document.getElementById('list-added');
-  return listAdded.innerHTML = `Your list items are: ${list}`;
+  return listAdded.innerText = list.join(', ');
 };
 
 function clearList(list)
@@ -19,7 +19,7 @@ function clearList(list)
   list.length = 0;
   const listAdded = document.getElementById('list-added');
   salaryInput.value = 0;
-  return listAdded.innerHTML = "Nothing on your list";
+  return listAdded.innerText = "Nothing on your list";
 }
 
 function esPar(lista)
