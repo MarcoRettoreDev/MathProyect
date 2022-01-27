@@ -4,100 +4,206 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Figuras geométricas | Curso Practico Javascript</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <title>Calculo de ingresos y gastos | Curso Practico Javascript</title>
 </head>
 <body>
-
-  <header class="header">  
-    <h1> Geometry calculator</h1>
-    <h4> Hi, welcome to my first Javascript proyect!</h4>
-    <h6> Hope you enjoy the app :)</h6>
+  <header class="header">
+    <div class="logo-container">
+      <img src="./images/logo demo.png" alt="">
+    </div>
+    <figure class="menu-icon">
+      <img src="./icons/icons-menu-48.png" alt="menu-burger" id="menu-burger">
+    </figure>
+    <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
+      <ol class="navbar-content">
+        <li>
+          <a href="/"> Home</a>
+        </li>
+        <li>
+          <a href="/proyects.html"> Proyects</a>
+        </li>
+        <li>
+          <a href="/about.html"> About me</a>
+        </li>
+        <li>
+          <a href="/contact.html"> Contact</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </nav>
+    <div class="menu-wrapper">
+      <ol class="menu-content">
+        <li>
+          <a href="/figuras.html"> Figuras Geométricas</a>
+        </li>
+        <li>
+          <a href="/promedios.html"> Promedios</a>
+        </li>
+        <li>
+          <a href="/discounts.html"> Descuentos</a>
+        </li>
+        <li>
+          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </div>
   </header>
-
+  
   <section class="geometry-section">
-    <h2>Hola! ¿Que quieres calcular hoy?</h2>
+    <h2 class="subtitle">Geometry Calculator</h2>
+    <div class="cards-container">
+      <form action="#" class="square-card">
+        <div class="card-image-container">
+          <img src="./images/square-vector.png" alt="imagen de un cuadrado">
+          <h2 class="subtitle">Square</h2>
+        </div>
+        <div class="input-square-section">
+          <label for="field">
+            Insert the side size:
+          </label>
+          <input id="input-square" class="geometry-input" type="number">
+        </div>
+        <div class="result-square-field">
+          <div class="perimeter-field">
+            <div class="icon-card-container">
+              <img src="./icons/icon-perimeter.png" alt="square perimeter icon">
+            </div>
+            <div class="text-card-field">
+              <h4>Perimeter</h4>
+              <p id="result-square-perimeter">4.5612112</p>
+            </div>
+          </div>
+          <div class="area-field">
+            <div class="icon-card-container">
+              <img src="./icons/icon-area.png" alt="square area icon">
+            </div>
+            <div class="text-card-field">
+              <h4>Area</h4>
+              <p id="result-square-perimeter">123.123762</p>
+            </div>
+          </div>
+        </div>
+        <div class="button-card-section">
+          <button id="button-square-perimeter" class="geometry-button" type="button" onclick="calcularPerimetroCuadrado()">
+            Calculate perimeter
+          </button>
+          <button id="button-square-area" class="geometry-button" type="button" onclick="calcularAreaCuadrado()">
+            Calculate area
+          </button>
+          <button id="button-square-clear" class="geometry-button" type="button" onclick="clearSquareResult()">
+            Reset 
+          </button>
+        </div>
+      </form>
 
-    <form action="#" class="square-card">
-      <div class="input-square-section">
-        <label for="field">
-          Inserta cuanto mide el lado de tu cuadrado:
-        </label>
-        <input id="input-square" type="number">
-      </div>
-      <div class="result-square-field">
-        <p>Solution is:</p>
-        <p id="result-square"></p>
-      </div>
-      <div class="button-square-section">
-        <button id="button-square-perimeter" type="button" onclick="calcularPerimetroCuadrado()">
-          Calculate the perimeter
-        </button>
-        <button id="button-square-area" type="button" onclick="calcularAreaCuadrado()">
-          Calculate the area
-        </button>
-        <button id="button-square-clear" type="button" onclick="clearSquareResult()">
-          Reset 
-        </button>
-      </div>
-    </form>
+      <form action="#" class="triangle-card">
+        <div class="card-image-container">
+          <img src="./images/triangle-vector.png" alt="imagen de un trinangulo">
+          <h2 class="subtitle">Triangle</h2>
+        </div>
+        <div class="input-triangle-section">
+          <div class="triangle-div">
+            <label for="field">Insert first side size: </label>
+            <input id="input-side-1" class="geometry-input" type="number">
+          </div>
+          <div class="triangle-div">
+            <label for="field">Insert second side size:   </label>
+            <input id="input-side-2" class="geometry-input" type="number">
+          </div>
+          <div class="triangle-div">
+            <label for="field"> Insert base size:</label>
+            <input id="input-base" class="geometry-input" type="number">
+          </div>
+        </div>
+        <div class="result-triangle-field">
+          <div class="perimeter-field">
+            <div class="icon-card-container">
+              <img src="./icons/icons-menu-48.png" alt="Icon triangle perimeter">
+            </div>
+            <div class="text-card-field">
+              <h4>Perimeter</h4>
+              <p id="result-triangle-perimeter">12321321</p>
+            </div>
+          </div>
+          <div class="area-field">
+            <div class="icon-card-container">
+              <img src="./icons/icons-menu-48.png" alt="triangle area icon">
+            </div>
+            <div class="text-card-field">
+              <h4>Area</h4>
+              <p id="result-triangle-area">123.12362</p>
+            </div>
+          </div>
+        </div>
+        <div class="button-card-section">
+          <button id="button-triangle-perimeter" class="geometry-button" type="button" onclick="calcularPerimetroTriangulo()">
+            Calculate perimeter
+          </button>
+          <button id="button-triangle-area" class="geometry-button" type="button" onclick="calcularAreaTriangulo()">
+            Calculate area
+          </button>
+          <button id="button-triangle-clear" class="geometry-button" type="button" onclick="clearTriangleResult()">
+            Reset
+          </button>
+        </div>
+      </form>
 
-    <form action="#" class="triangle-card">
-      <div class="input-tringle-section">
-        <label for="field">
-          Inserta cuanto mide el lado1 de tu triangulo:
-        </label>
-        <input id="input-side-1" type="number">
-        <label for="field">
-          Inserta cuanto mide el lado2 de tu triangulo:
-        </label>
-        <input id="input-side-2" type="number">
-        <label for="field">
-          Inserta cuanto mide la base de tu triangulo:
-        </label>
-        <input id="input-base" type="number">
-      </div>
-      <div class="result-triangle-field">
-        <p>Solution is:</p>
-        <p id="result-triangle"></p>
-      </div>
-      <div class="button-triangle-section">
-        <button id="button-triangle-perimeter" type="button" onclick="calcularPerimetroTriangulo()">
-          Calculate the perimeter
-        </button>
-        <button id="button-triangle-area" type="button" onclick="calcularAreaTriangulo()">
-          Calculate the area
-        </button>
-        <button id="button-triangle-clear" type="button" onclick="clearTriangleResult()">
-          Reset
-        </button>
-      </div>
-    </form>
-
-    <form action="#" class="circle-card">
-      <div class="input-circle-section">
-        <label for="input-circle">
-          Inserta cuanto mide el RADIO de tu circulo:
-        </label>
-        <input id="input-circle" type="number">
-      </div>
-      <div class="result-circle-field">
-        <p>Solution is:</p>
-        <p id="result-circle"></p>
-      </div>
-      <div class="button-circle-section">
-        <button id="button-circle-perimeter" type="button" onclick="calcularPerimetroCirculo()">
-          Calculate the circumference
-        </button>
-        <button id="button-circle-area" type="button" onclick="calcularAreaCirculo()">
-          Calculate the area
-        </button>
-        <button id="button-circle-clear" type="button" onclick="clearCircleResult()">
-          Reset
-        </button>
-      </div>
-    </form>
-    
+      <form action="#" class="circle-card">
+        <div class="card-image-container">
+          <img src="./images/circle-vector.png" alt="imagen de un circulo">
+          <h2 class="subtitle">Circle</h2>
+        </div>
+        <div class="input-circle-section">
+          <label for="input-circle">  Insert circle radius:  </label>
+          <input id="input-circle" class="geometry-input" type="number">
+        </div>
+        <div class="result-circle-field">
+          <div class="perimeter-field">
+            <div class="icon-card-container">
+              <img src="./icons/icons-menu-48.png" alt="Icon circle diameter">
+            </div>
+            <div class="text-card-field">
+              <h4>Diameter</h4>
+              <p id="result-circle-perimeter">12321321</p>
+            </div>
+          </div>
+          <div class="area-field">
+            <div class="icon-card-container">
+              <img src="./icons/icons-menu-48.png" alt="circle circumference icon">
+            </div>
+            <div class="text-card-field">
+              <h4>Circumference</h4>
+              <p id="result-circle-circumference">123.12362</p>
+            </div>
+          </div>
+        </div>
+        <div class="button-card-section">
+          <button id="button-circle-perimeter" class="geometry-button" type="button" onclick="calcularPerimetroCirculo()">
+            Calculate circum.
+          </button>
+          <button id="button-circle-area" class="geometry-button" type="button" onclick="calcularAreaCirculo()">
+            Calculate area
+          </button>
+          <button id="button-circle-clear" class="geometry-button" type="button" onclick="clearCircleResult()">
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
+  <footer class="footer-wrapper">
+    <h4 class="footer-text">Copyright © Mr. Dev 2022 </h4>
+    <div class="footer-content">
+      <a href="mailto: marcorettoremattes@gmail.com" subject="subject text"><img src="./icons/icons-email-send-80.png" alt="Email send icon"></a>
+      <a href="https://www.linkedin.com/in/marco-antonio-rettore-mattes/"><img src="./icons/icons-linkedin-60.png" alt="Linkedin icon"></a>
+      <a href="https://github.com/marc0147" target="_blank"><img src="./icons/icons-github-60.png" alt="Github icon"></a>
+    </div>
+  </footer>
   <script src="./figuras.js"></script>
+  <script src="./ingresoMensual.js"></script>
+  <script src="./analisis.js"></script>
 </body>
 </html>
