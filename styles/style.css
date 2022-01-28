@@ -97,6 +97,16 @@
   padding:0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* Configuración general */
 
 html
@@ -288,6 +298,14 @@ p
 {
   position:relative;
   top:10px;
+}
+
+@media screen and (min-width: 1024px)
+{
+  .logo-container
+  {
+    top: 0px;
+  }  
 }
 
 .navbar-content
@@ -877,6 +895,7 @@ p
 .geometry-section h2
 {
   grid-row: 1/2;
+  text-align: center;
 }
 
 .cards-container
@@ -888,10 +907,52 @@ p
   width: 350px;
 }
 
+@media screen and (min-width: 1024px)
+{
+  .cards-container
+  {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 40px;
+    margin-top: var(--content-spacing);
+  }
+
+  .geometry-section h2
+{
+  grid-row: 1/2;
+  text-align: left;
+}
+
+  .square-card
+  {
+    grid-row: 1/2 !important;
+    grid-column: 1/2;
+    width: 400px;
+  }
+  .triangle-card
+  {
+    grid-row: 1/2 !important;
+    grid-column: 2/3;
+    width: 400px;
+    margin: 0 !important;
+  }
+
+  .circle-card
+  {
+    grid-row: 1/2 !important;
+    grid-column: 3/4;
+    width: 400px;
+    margin: 0 !important;
+
+  }
+}
+
 .square-card
 {
   grid-row: 2/3;
   display:flex;
+  justify-content: space-between;
   flex-direction: column;
   border: .25px solid var(--white);
   border-radius: var(--border-radius);
@@ -918,24 +979,26 @@ p
 
 .input-square-section
 {
+  height: 150px;
+}
+
+.input-square-section div
+{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: var(--basic-color);
   font-family: var(--body-font);
   margin-top: var(--margin-top-card);
   padding: 4px 8px;
-}
-
-.input-square-section label
-{
-  display:grid;
-  place-content: center;
+  height: 100%;
 }
 
 .geometry-input 
 {
   width: 100px;
+  height: 26px;
   border-radius: var(--border-radius);
   padding: 2px 4px;
 }
@@ -947,7 +1010,10 @@ p
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 150px;
 }
+
+
 
 .perimeter-field
 {
@@ -956,7 +1022,7 @@ p
   display:inline-flex;
   flex-direction: row;
   width: 100%;
-
+  height: 50px;
   margin-top:var(--margin-top-card);
 }
 
@@ -967,8 +1033,15 @@ p
   display:inline-flex;
   flex-direction: row;
   width: 100%;
+  height: 50px;
 
   margin-top:var(--margin-top-card);
+}
+
+.icon-card-container
+{
+  display:grid;
+  place-content: center;
 }
 
 .icon-card-container img
@@ -997,6 +1070,7 @@ p
 {
   color:var(--basic-color);
   font-family: var(--body-font);
+  height: 20px;
 }
 
 .button-card-section
@@ -1005,7 +1079,7 @@ p
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  height: 50px;
   margin-top:var(--margin-top-card);
 }
 
@@ -1013,12 +1087,12 @@ p
 {
   grid-row: 3/4;
   display:flex;
+  justify-content: space-around;
   flex-direction: column;
   border: .25px solid var(--white);
   border-radius: var(--border-radius);
   padding: 12px;
-
-  margin-top: var(--margin-top-card);
+  margin-top: 24px;
 }
 
 .input-triangle-section
@@ -1054,23 +1128,31 @@ p
 {
   grid-row: 4/5;
   display:flex;
+  justify-content: space-between;
   flex-direction: column;
   border: .25px solid var(--white);
   border-radius: var(--border-radius);
   padding: 12px;
 
-  margin-top: var(--margin-top-card);
+  margin-top: 24px;
 }
 
 .input-circle-section
 {
+  height: 150px;
+}
+
+.input-circle-section div
+{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: var(--basic-color);
   font-family: var(--body-font);
   margin-top: var(--margin-top-card);
   padding: 4px 8px;
+  height: 100%;
 }
 
 .input-circle-section label
@@ -1078,13 +1160,6 @@ p
   display:grid;
   place-content: center;
 }
-
-.button-circle-section
-{
-  
-}
-
-
 
 
 
@@ -1145,8 +1220,8 @@ p
 {
   color: var(--basic-color);
   position: absolute;
-  top: 50px;
-  right: 60px;
+  top: 45px;
+  right: 80px;
   font-size: 36px;
   font-weight: bold;
 }

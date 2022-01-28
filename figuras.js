@@ -85,7 +85,7 @@ function calcularPerimetroCuadrado()
   const value = inputsquare.value;
   const perimetro = perimetroCuadrado(value);
 
-  const result = document.getElementById('result-square'); // result var
+  const result = document.getElementById('result-square-perimeter'); // result var
   result.innerHTML = (`${perimetro} cm`); // print the result
 }
 
@@ -96,14 +96,18 @@ function calcularAreaCuadrado()
   const area = areaCuadrado(value);
 
 
-  const result = document.getElementById('result-square'); // result var
-  result.innerHTML = (`${area} cm`); // print the result
+  const result = document.getElementById('result-square-area'); // result var
+  result.innerHTML = (`${area} cm²`); // print the result
 }
 
 function clearSquareResult ()
 {
-  const result = document.getElementById('result-square');
-  result.innerHTML = "";
+  const result = document.getElementById('result-square-perimeter');
+  const result2 = document.getElementById('result-square-area');
+  const inputsquare = document.getElementById('input-square');
+  result2.textContent = "";
+  result.textContent = "";
+  inputsquare.value = "";
 }
 
 // HTML TRIANGLE BUTTONS
@@ -118,7 +122,7 @@ function calcularPerimetroTriangulo()
   const valuebase = parseInt(inputbase.value);
   const perimetrotriangulo = perimetroTriangulo(value1,value2,valuebase);
 
-  const result = document.getElementById('result-triangle'); // result var
+  const result = document.getElementById('result-triangle-perimeter'); // result var
   result.innerHTML = (`${perimetrotriangulo} cm`); // print the result
 }
 
@@ -135,14 +139,22 @@ function calcularAreaTriangulo()
   const altura = alturaTrianguloIsoceles(value1,value2,valuebase);
   const areatriangulo = areaTriangulo(valuebase, altura);
 
-  const result = document.getElementById('result-triangle'); // result var
-  result.innerHTML = (`${areatriangulo} CM²`); // print the result
+  const result = document.getElementById('result-triangle-area'); // result var
+  result.innerHTML = (`${areatriangulo} cm²`); // print the result
 }
 
 function clearTriangleResult()
 {
-  const result = document.getElementById('result-triangle');
-  result.innerHTML = "";
+  const result = document.getElementById('result-triangle-perimeter');
+  const result2 = document.getElementById('result-triangle-area');
+  const inputside1 = document.getElementById('input-side-1'); 
+  const inputside2 = document.getElementById('input-side-2'); 
+  const inputbase = document.getElementById('input-base');
+  result2.textContent = " ";
+  result.textContent = " ";
+  inputside1.value = " ";
+  inputside2.value = " ";
+  inputbase.value = " ";
 }
 
 
@@ -154,7 +166,7 @@ function calcularPerimetroCirculo()
   const value = parseInt(inputRadio.value);
   const calculoPerimetroCirculo = perimetroCirculo(value);
   
-  const result = document.getElementById('result-circle'); // result var
+  const result = document.getElementById('result-circle-circumference'); // result var
   result.innerHTML = (`${calculoPerimetroCirculo} cm`);
 }
 
@@ -164,12 +176,24 @@ function calcularAreaCirculo()
   const value = parseInt(inputRadio.value); // pasamo a integer the value
   const calculoAreaCirculo = areaCirculo(value);
 
-  const result = document.getElementById('result-circle'); // result var
-  result.innerHTML = (`${calculoAreaCirculo} cm`);
+  const result = document.getElementById('result-circle-area'); // result var
+  result.innerHTML = (`${calculoAreaCirculo} cm²`);
 }
 function clearCircleResult()
 {
-  const result = document.getElementById('result-circle');
+  const result = document.getElementById('result-circle-circumference');
+  const result2 = document.getElementById('result-circle-area');
+  const inputRadio = document.getElementById('input-circle');  
+  result2.innerText = "";
   result.innerHTML = "";
+  inputRadio.value = "";
 }
 
+
+// boton X cerrar menu
+var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close the modal
+span.onclick = () => span.style.display = "none";
+
+//boton menu burger
+var btnMenuBurger = document.getElementById('menu-burger');
+btnMenuBurger.onclick = () => span.style.display = "block";
