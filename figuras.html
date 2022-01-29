@@ -19,16 +19,16 @@
     <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
       <ol class="navbar-content">
         <li>
-          <a href="/"> Home</a>
+          <a href="/" class="btn-navbar animated-button thar-one"> Home</a>
         </li>
         <li>
-          <a href="/proyects.html"> Proyects</a>
+          <a href="/proyects.html" class="btn-navbar animated-button thar-two"> Proyects</a>
         </li>
         <li>
-          <a href="/about.html"> About me</a>
+          <a href="/about.html" class="btn-navbar animated-button thar-three"> About me</a>
         </li>
         <li>
-          <a href="/contact.html"> Contact</a>
+          <a href="/contact.html" class="btn-navbar animated-button thar-four"> Contact</a>
         </li>
         <span class="menu-close">&times; </span>
       </ol>
@@ -65,7 +65,7 @@
             <label for="field">
               Insert the side size:
             </label>
-            <input id="input-square" class="geometry-input" type="number">
+            <input id="input-square" class="geometry-input" type="number"  placeholder="Ex: 8">
           </div>
         </div>
         <div class="result-square-field">
@@ -103,7 +103,7 @@
           <button id="button-square-area" class="geometry-button" type="button" onclick="calcularAreaCuadrado()">
             Calculate area
           </button>
-          <button id="button-square-clear" class="geometry-button" type="button" onclick="clearSquareResult()">
+          <button id="button-square-clear" class="geometry-button reset" type="button" onclick="clearSquareResult()">
             Reset 
           </button>
         </div>
@@ -117,15 +117,15 @@
         <div class="input-triangle-section">
           <div class="triangle-div">
             <label for="field">Insert first side size: </label>
-            <input id="input-side-1" class="geometry-input" type="number">
+            <input id="input-side-1" class="geometry-input" type="number"  placeholder="Ex: 6">
           </div>
           <div class="triangle-div">
             <label for="field">Insert second side size:   </label>
-            <input id="input-side-2" class="geometry-input" type="number">
+            <input id="input-side-2" class="geometry-input" type="number"  placeholder="Ex: 6">
           </div>
           <div class="triangle-div">
             <label for="field"> Insert base size:</label>
-            <input id="input-base" class="geometry-input" type="number">
+            <input id="input-base" class="geometry-input" type="number"  placeholder="Ex: 4">
           </div>
         </div>
         <div class="result-triangle-field">
@@ -162,7 +162,7 @@
           <button id="button-triangle-area" class="geometry-button" type="button" onclick="calcularAreaTriangulo()">
             Calculate area
           </button>
-          <button id="button-triangle-clear" class="geometry-button" type="button" onclick="clearTriangleResult()">
+          <button id="button-triangle-clear" class="geometry-button reset" type="button" onclick="clearTriangleResult()">
             Reset
           </button>
         </div>
@@ -176,7 +176,7 @@
         <div class="input-circle-section">
           <div>
             <label for="input-circle">  Insert circle radius:  </label>
-            <input id="input-circle" class="geometry-input" type="number">
+            <input id="input-circle" class="geometry-input" type="number"  placeholder="Ex: 3.4">
           </div>
         </div>
         <div class="result-circle-field">
@@ -213,7 +213,7 @@
           <button id="button-circle-area" class="geometry-button" type="button" onclick="calcularAreaCirculo()">
             Calculate area
           </button>
-          <button id="button-circle-clear" class="geometry-button" type="button" onclick="clearCircleResult()">
+          <button id="button-circle-clear" class="geometry-button reset" type="button" onclick="clearCircleResult()">
             Reset
           </button>
         </div>
