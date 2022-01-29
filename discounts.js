@@ -16,15 +16,19 @@ function calcularPrecioConDescuento()
 
   // Imprimimos el resultado:
   const field = document.getElementById('result-discount');
-  field.innerHTML = (precioConDescuento);
+  field.innerHTML = `$${precioConDescuento}`;
   // Retornamos el precio ya descontado
   return precioConDescuento;
 }
 
 function clearDiscount()
 {
+  const inputPrice = document.getElementById('input-price');
+  const inputDiscount = document.getElementById('input-discount');
   const field = document.getElementById('result-discount');
   field.innerHTML = " ";
+  inputPrice.value = '';
+  inputDiscount.value = '';
 }
 
 
@@ -37,3 +41,10 @@ const input2 = document.getElementById('input-discount');
 input2.addEventListener('input', calcularPrecioConDescuento);
 
 
+// boton X cerrar menu
+var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close the modal
+span.onclick = () => span.style.display = "none";
+
+//boton menu burger
+var btnMenuBurger = document.getElementById('menu-burger');
+btnMenuBurger.onclick = () => span.style.display = "block";

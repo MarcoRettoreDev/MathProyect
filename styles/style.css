@@ -116,7 +116,7 @@ html
   width: 100%;
 }
 
-
+.body,
 body
 {
   height: 100%;
@@ -240,6 +240,11 @@ p
   border: 2px solid var(--red);
   box-shadow: 2px 2px 5px 1px var(--red), 
   -2px -2px 5px 1px var(--red);
+}
+
+.clear-button:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
 }
 
 @media screen and (min-width: 1024px)
@@ -1080,8 +1085,6 @@ a.animated-button.thar-four:before {
   }
 }
 
-
-
 /* Buttons Calculator Section */
 .button-calculator-section
 {
@@ -1394,6 +1397,93 @@ a.animated-button.thar-four:before {
 }
 
 
+                                                              /* Discounts */
+.discount-section
+{
+  display:grid;
+  place-items:center;
+  height: 100%;
+  margin-top: var(--section-spacing);
+  width: 90%;
+}
+
+.text-discount-field p
+{
+  line-height: 22px;
+}
+
+.discount-wrapper
+{
+  display:grid;
+  place-content:center;
+  height: 100%;
+  border: 1px solid var(--text-input-field);
+  border-radius: var(--border-radius);
+  padding: 12px;
+  color:var(--basic-color);
+  font-family: var(--body-font);
+  font-weight: bold;
+
+  margin-top: var(--content-spacing);
+  grid-template-rows: 2fr repeat(2, 1fr);
+}
+
+@media screen and (min-width: 810px)
+{
+  .discount-wrapper
+  {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px)
+{
+  .discount-wrapper
+  {
+    width: 35%;
+  }
+}
+
+.input-discount-section
+{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--title-font);
+}
+
+.input-discount
+{
+  width: 120px;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.result-discount-field
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  height: 50px;
+  margin-top: var(--content-spacing);  
+}
+
+.result-discount-field p
+{
+  display:grid;
+  place-content: center;
+}
+
+.button-discount-wrapper
+{
+  display:grid;
+  place-content: center;
+}
+
 
                                                             /* menu RESPONSIVE */
 .menu-wrapper
@@ -1518,6 +1608,11 @@ a.animated-button.thar-four:before {
   {
     height: 40px;
     margin-right: 16px
+  }
+
+  .footer-wrapper
+  {
+    margin-top:var(--content-spacing);
   }
 }
 

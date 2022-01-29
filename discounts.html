@@ -4,31 +4,89 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Porcentajes y descuentos | Curso Práctico de JS</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <title>Porcentaje de descuento | Curso Practico Javascript</title>
 </head>
-<body>
-  <header class="header-discount">  
-    <h1> Discounts calculator</h1>
-    <h4> Hope you enjoy the app :)</h4>
+<body class="body">
+  <header class="header">
+    <div class="logo-container">
+      <img src="./images/logo demo.png" alt="">
+    </div>
+    <figure class="menu-icon">
+      <img src="./icons/icons-menu-48.png" alt="menu-burger" id="menu-burger">
+    </figure>
+    <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
+      <ol class="navbar-content">
+        <li>
+          <a href="/" class="btn-navbar animated-button thar-one"> Home</a>
+        </li>
+        <li>
+          <a href="/proyects.html" class="btn-navbar animated-button thar-two"> Proyects</a>
+        </li>
+        <li>
+          <a href="/about.html" class="btn-navbar animated-button thar-three"> About me</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="btn-navbar animated-button thar-four"> Contact</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </nav>
+    <div class="menu-wrapper">
+      <ol class="menu-content">
+        <li>
+          <a href="/figuras.html"> Figuras Geométricas</a>
+        </li>
+        <li>
+          <a href="/promedios.html"> Promedios</a>
+        </li>
+        <li>
+          <a href="/discounts.html"> Descuentos</a>
+        </li>
+        <li>
+          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+        </li>
+        <span class="menu-close">&times; </span>
+      </ol>
+    </div>
   </header>
+  
   <section class="discount-section">
-    <form action="#">
+    <div class="text-discount-field">
+      <h1 class="title"> Discount to Price</h1>
+      <p> How many times we try to mental calculate % to discounted prices. It can be a simple taks or allmost imposible, its easy to calculate the 10% of 100 U$D, but try with the 8% of 62 U$D, a lot more dificult right? </p>
+      <p>
+      That's why i dicided to create this usefull tool, it allows you to calculate diferents percentage around a number
+      </p>
+    </div>
+    <form action="#" class="discount-wrapper">
       <div class="input-discount-section">
         <label for="input-price">Insert the original price</label>
-        <input type="number" id="input-price" placeholder="Example: 100 u$d">
+        <input type="number" class="input-discount" id="input-price" placeholder="Ex: 100 u$d">
         <label for="input-discount">Insert the % to discount</label>
-        <input type="number" id="input-discount" oninput="calcularPrecioConDescuento()" placeholder="Example: 15%">
+        <input type="number" class="input-discount" id="input-discount" oninput="calcularPrecioConDescuento()" placeholder="Ex: 15%">
       </div>
       <div class="result-discount-field">
         <p>Discounted price:</p>
         <p id="result-discount"></p>
       </div>
-      <div>
-        <button type="button" id="result-" onclick="clearDiscount()">Reset</button>
+      <div class="button-discount-wrapper">
+        <button type="button" class="primary-button clear-button" onclick="clearDiscount()">Clear</button>
       </div>
     </form>
   </section>
-
+  <footer class="footer-wrapper">
+    <h4 class="footer-text">Copyright © Mr. Dev 2022 </h4>
+    <div class="footer-content">
+      <a href="mailto: marcorettoremattes@gmail.com" subject="subject text"><img src="./icons/icons-email-send-80.png" alt="Email send icon"></a>
+      <a href="https://www.linkedin.com/in/marco-antonio-rettore-mattes/"><img src="./icons/icons-linkedin-60.png" alt="Linkedin icon"></a>
+      <a href="https://github.com/marc0147" target="_blank"><img src="./icons/icons-github-60.png" alt="Github icon"></a>
+    </div>
+  </footer>
+  <script src="./promedio.js"></script>
+  <script src="./figuras.js"></script>
+  <script src="./analisis.js"></script>
   <script src="./discounts.js"></script>
 </body>
 </html>
