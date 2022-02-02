@@ -1,14 +1,15 @@
 :root
 {
   /* COLORES */
-  --basic-color: #f0f0f0;
-  --text-input-field: #d4d4d4;
+  --black: #08080C;
+  --dark: #121118;
+  --light-dark: #2C2C3A;
+  --text-input-field: #32323E;
+  --basic-color: #DEDCE5;
   --white: #ffffff;
-  --black:#000000;
   --orange:#c0741d;
-  --light-dark: #464646bb;
-  --red: #ce1111;
-  --green: #21c204;
+  --red: #a30d0d;
+  --green: #167e04;
 
   --transparent: transparent;
 
@@ -112,14 +113,14 @@ input::-webkit-inner-spin-button {
 
 html
 {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
 .body,
 body
 {
-  height: 100%;
+  min-height: 100%;
   background: var(--background);
   display:grid;
   place-items: center;
@@ -526,7 +527,7 @@ a.animated-button.thar-four:before {
   #menu-burger
   {
   height: 42px;
-  top: 40px;
+  top: 70px;
   right: 230px;
   }
 }
@@ -538,6 +539,53 @@ a.animated-button.thar-four:before {
   {
     display:none;
   }
+}
+                                                                /* INDEX */
+
+.index-wrapper
+{
+  width: 90%;
+}
+.content-wrapper
+{
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  grid-template-rows: repeat(3 ,1fr);
+}
+
+.line-wrapper
+{
+  grid-column: 1/2;
+  grid-row: 1/4;
+  
+  margin: 0px 6px;
+
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  position:relative;
+}
+
+#line-ball-1
+{
+  background-color: grey;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  z-index: var(--z-off-canvas);
+  position: absolute;
+  top: 200px;
+  left: 12px;
+  display:block;
+}
+
+.personal-info
+{
+  display:flex; 
+  flex-direction: column;
+  padding: 8px;
+  margin: 8px;
+  background-color: var(--text-input-field);
+  border-radius: var(--border-radius);
 }
 
                                                                  /* SECTIONS */
@@ -1403,7 +1451,7 @@ a.animated-button.thar-four:before {
   display:grid;
   place-items:center;
   height: 100%;
-  margin-top: var(--section-spacing);
+  margin-top: var(--content-spacing);
   width: 90%;
 }
 
@@ -1416,7 +1464,6 @@ a.animated-button.thar-four:before {
 {
   display:grid;
   place-content:center;
-  height: 100%;
   border: 1px solid var(--text-input-field);
   border-radius: var(--border-radius);
   padding: 12px;
@@ -1623,7 +1670,7 @@ a.animated-button.thar-four:before {
   {
     display:flex;
     justify-content: center;
-    margin-top: var(--section-spacing);
+    margin-top: var(--content-spacing);
   }
   .footer-content
   {
