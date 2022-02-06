@@ -121,6 +121,35 @@ body
   filter: grayscale(30%);
 }
 
+.title
+{
+  color:var(--basic-color);
+  font-family: var(--title-font);
+  font-size:var(--h1-font-size);
+  line-height: var(--title-line-height);
+}
+
+.subtitle
+{
+  color:var(--text-input-field);
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+}
+
+.h3
+{
+  color:var(--basic-color);
+  font-size: var(--h3-font-size);
+}
+
+.text
+{
+  color:var(--basic-color);
+  font-family: var(--body-font);
+  font-size: var(--normal);
+}
+
+
 
 /* HEADER */
 .header
@@ -234,6 +263,8 @@ body
   right: 46%;
   top: 2%;
   font-size: 16px;
+
+  display:none;
 }
 
 @media screen and (min-width: 1024px)

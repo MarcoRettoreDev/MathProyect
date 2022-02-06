@@ -509,9 +509,6 @@ a.animated-button.thar-four:before {
 }
 
 
-
-
-
 .menu-icon img,                                          /* BURGER MENU */
 #menu-burger
 {
@@ -588,7 +585,7 @@ a.animated-button.thar-four:before {
   border-radius: var(--border-radius);
 }
 
-                                                                 /* SECTIONS */
+                                           /* SECTIONS */
 
 .calculator-section
 {
@@ -1672,6 +1669,7 @@ a.animated-button.thar-four:before {
     justify-content: center;
     margin-top: var(--content-spacing);
   }
+  
   .footer-content
   {
     margin-left: 120px

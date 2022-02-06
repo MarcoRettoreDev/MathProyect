@@ -1,0 +1,89 @@
+
+/* DISCOUNT - SECTION */
+
+.discount-section
+{
+  display:grid;
+  place-items:center;
+  height: 100%;
+  width: var(--project-card-size);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 810px)
+{
+  .discount-section
+  {
+    width: var(--card-size);
+  }
+}
+
+@media screen and (min-width: 1024px)
+{
+  .discount-section
+  {
+    width: var(--card-size);
+  }
+}
+
+.discount-wrapper
+{
+  display:grid;
+  place-content:center;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 12px;
+  color:var(--basic-color);
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  margin-top: var(--content-spacing);
+  grid-template-rows: 2fr repeat(2, 1fr);
+}
+
+
+.input-discount-section
+{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--title-font);
+  font-size: var(--medium-font-size);
+}
+
+.input-discount
+{
+  width: 120px;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.result-discount-field
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  height: 50px;
+  margin-top: var(--content-spacing);
+
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.result-discount-field p
+{
+  display:grid;
+  place-content: center;
+}
+
+.button-discount-wrapper
+{
+  display:grid;
+  place-content: center;
+}
+
+

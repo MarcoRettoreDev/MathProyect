@@ -1,7 +1,7 @@
 // Variables
 
-let ingresoTotal = [0];
-let gasto = [0];
+let ingresoTotal = [0]; // Lista ingreso
+let gasto = [0];        // List Gasto
 
 // Funciones para agregar items
 function nuevoIngreso (monto)
@@ -23,11 +23,13 @@ function nuevoIngreso (monto)
   // img
   img.setAttribute('type', 'image'); // atributos img
   img.setAttribute('class', 'btn-close'); 
-  img.setAttribute('src', './icons/icon_close.png');
+  img.setAttribute('src', '/icons/icon_close.png');
   img.setAttribute('onclick', 'deleteIngreso(this)');
   
   div.appendChild(p); // agregamos el hijo a nuestra lista
   div.appendChild(img);
+
+  clearInput(); // Borramos el contenido del input
 };
 
 function nuevoGasto (monto) 
@@ -49,24 +51,26 @@ function nuevoGasto (monto)
 
   img.setAttribute('type', 'image'); 
   img.setAttribute('class', 'btn-close'); 
-  img.setAttribute('src', './icons/icon_close.png');
+  img.setAttribute('src', '/icons/icon_close.png');
   img.setAttribute('onclick', 'deleteGasto(this)');
   
   
   div.appendChild(p); 
   div.appendChild(img);
+
+  clearInput(); 
 };
 
 
 // Funcion borrar item
 const deleteIngreso = (el) =>
 {
-  var element = el;
-  element.parentNode.remove(el);
-  const value = Number(el.previousElementSibling.innerText);
-  borrarIngreso(value);
-  sumarIngresos();
-  balance();
+  var element = el; // traemos el elemento al scope
+  element.parentNode.remove(el); // removemos el nodo padre
+  const value = Number(el.previousElementSibling.innerText); // Guardamos el valor en constante para enviarle como parámetro 
+  borrarIngreso(value); // se borra de la lista
+  sumarIngresos(); // se suman todos los valores nuevamente
+  balance(); // se hace el balance de la lista
 }
 
 const deleteGasto = (el) =>
@@ -89,7 +93,7 @@ function input () // input
 // Funciones para sumar
 const suma = (a ,b) => a + b;
 
-function sumarIngresos()
+function sumarIngresos() // suma todos los ingresos de la lista
 {
   let resultado = ingresoTotal.reduce((a ,b)=> a + b);
   const field = document.getElementById('income-total-field')
@@ -98,7 +102,7 @@ function sumarIngresos()
 };
 
 
-function sumarGastos()
+function sumarGastos() // suma todos los gastos de la lista
 {
   let resultado = gasto.reduce((a ,b)=> a + b);
   const field = document.getElementById('expense-total-field')
@@ -110,22 +114,17 @@ function sumarGastos()
 
 // Funciones para restar
 
-function borrarIngreso(value)
+function borrarIngreso(value)  // borra la linea especifica de ingreso
 {
   const index = ingresoTotal.indexOf(value);
   ingresoTotal.splice(index, 1);
 };
 
-function borrarGasto(valor)
-{
+function borrarGasto(valor)  // borra la linea especifica de gasto
+{ 
   const index = gasto.indexOf(valor);
   gasto.splice(index, 1);
 };
-
-// function borrarGastoVariable()                           PROXIMAMENTE
-// {
-//   gastoVariable.pop();
-// };
 
 // Funcion balance
 
@@ -138,6 +137,14 @@ function balance()
   field.innerText = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`;
   return resultado;
 };
+
+// Funcion clear input
+
+function clearInput ()
+{
+  const input = document.getElementById('input-calculator-field');
+  return input.value = '';
+}
 
 // Porcentaje
  
@@ -168,8 +175,11 @@ span.onclick = () => span.style.display = "none";
 var btnMenuBurger = document.getElementById('menu-burger');
 btnMenuBurger.onclick = () => span.style.display = "block";
 
-window.addEventListener('click', sumarIngresos);
-window.addEventListener('click', sumarGastos);
-window.addEventListener('click', balance);
+// Auto suma gastos, ingresos y balance.
+
+btnAddIncome.addEventListener('click', sumarIngresos);
+btnAddExpense.addEventListener('click', sumarGastos);
+btnAddExpense.addEventListener('click', balance);
+btnAddIncome.addEventListener('click', balance);
 
 

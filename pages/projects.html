@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="/styles/projects.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <title>Mr. Dev | Web Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Projects | Mr Dev</title>
 </head>
 
 <body>
   <header class="header">
-    <figure class="menu-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" width="36" fill="#DEDCE5" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
-    </figure>
+    <div class="menu-icon">
+      <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" height="100%" fill="#7a7a7a" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
+      </figure>
+    </div>
     <nav class="navbar-content">
       <div class="home-content">
         <a href="/" class="btn-index animated-button thar-one"><span>Home</span></a>
@@ -35,23 +37,82 @@
     <div class="menu-wrapper">
       <ol class="menu-content">
         <li>
-          <a href="/figuras.html"> Figuras Geométricas</a>
+          <a href="/index.html"> Home</a>
         </li>
         <li>
-          <a href="/promedios.html"> Promedios</a>
+          <a href="/pages/projects.html"> Projects</a>
         </li>
         <li>
-          <a href="/discounts.html"> Descuentos</a>
+          <a href="/pages/about.html"> About</a>
         </li>
         <li>
-          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+          <a href="/pages/contact.html"> Contact</a>
         </li>
         <span class="menu-close">&times; </span>
       </ol>
     </div>
   </header>
-  <section class="index-wrapper">
-
-  </section>
+  <div class="index-wrapper">
+    <h1 class="title"> Finalized projects</h1>
+    <section class="section-projects">
+      <div class="project-card" id="project-id-1" onmouseout=hideText(this.id) onmouseover=showText(this.id) onclick=showText(this.id)>
+        <img src="/images/PercentCalculatorCard-img.jpg" alt="Img project">
+        <div class="card-text">
+          <h4 class="card-title"> Percent Calculator</h4>
+          <div class="img-card-field">
+            <div class="go-to">
+              <a href="/pages/discounts.html">Go-to</a>
+            </div>
+            <div class="card-icon-container">
+              <a href="#" target="_blank"><img src="/icons/icons-github-60.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" id="project-id-2" onmouseout=hideText(this.id) onmouseover=showText(this.id) onclick=showText(this.id)>
+        <img src="/images/IncomeExpenseCard-img.jpg" alt="Img project">
+        <div class="card-text">
+          <h4 class="card-title"> Income & Expense</h4>
+          <div class="img-card-field">
+            <div class="go-to">
+              <a href="/pages/ingresoMensual.html">Go-to</a>
+            </div>
+            <div class="card-icon-container">
+              <a href="#" target="_blank"><img src="/icons/icons-github-60.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" id="project-id-3" onmouseout=hideText(this.id) onmouseover=showText(this.id) onclick=showText(this.id)>
+        <img src="/images/MeanMedianModeCard-img.jpg" alt="Img project">
+        <div class="card-text">
+          <h4 class="card-title"> Mean Median & Mode</h4>
+          <div class="img-card-field">
+            <div class="go-to">
+              <a href="/pages/promedios.html">Go-to</a>
+            </div>
+            <div class="card-icon-container">
+              <a href="#" target="_blank"><img src="/icons/icons-github-60.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" id="project-id-4" onmouseout=hideText(this.id) onmouseover=showText(this.id) onclick=showText(this.id)>
+        <img src="/images/GeometryCard-Img.jpg" alt="Img project">
+        <div class="card-text">
+          <h4 class="card-title"> Geometry Card</h4>
+          <div class="img-card-field">
+            <div class="go-to">
+              <a href="/pages/figuras.html">Go-to</a>
+            </div>
+            <div class="card-icon-container">
+              <a href="#" target="_blank"><img src="/icons/icons-github-60.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="/scripts/projects.js"></script>
 </body>
 </html>
