@@ -135,8 +135,7 @@
 
     --title-line-height  : 1.8;
 
-
-
+    --card-size          :400px;
   }
 }
 
@@ -168,7 +167,7 @@ html
 
 body
 {
-  height: 100%;
+  height: 100vh;
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,7 +178,7 @@ body
 .title
 {
   color:var(--basic-color);
-  font-family: var(--title-font);
+  font-family: var(--buttons-index-font);
   font-size:var(--h1-font-size);
   line-height: var(--title-line-height);
 }
@@ -187,7 +186,7 @@ body
 .subtitle
 {
   color:var(--text-input-field);
-  font-family: var(--title-font);
+  font-family: var(--buttons-index-font);
   font-size: var(--h2-font-size);
 }
 
@@ -252,20 +251,6 @@ body
   font-weight: bold;
 }
 
-#button-add-expense
-{
-  border: 2px solid var(--red);
-  box-shadow: 2px 2px 5px 1px var(--red), 
-  -2px -2px 5px 1px var(--red);
-}
-
-#button-add-income
-{
-  border: 2px solid var(--green);
-  box-shadow: 2px 2px 5px 1px var(--green), 
-  -2px -2px 5px 1px var(--green);
-}
-
 .geometry-button
 {
   display:inline-block;
@@ -281,10 +266,11 @@ body
   font-weight: bold;
 }
 
-.geometry-button:active {
+.btn-efect-in:active {
   transform: translateY(1px);
   filter: saturate(150%);
 }
+
 
 .geometry-button + .reset
 {

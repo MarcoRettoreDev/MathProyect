@@ -5,6 +5,7 @@
 {
   display:grid;
   place-items:center;
+  grid-template-rows: 10% 80%;
   height: 100%;
   width: var(--project-card-size);
   margin: 0 auto;
@@ -15,6 +16,7 @@
   .discount-section
   {
     width: var(--card-size);
+    grid-template-rows: 10% 60%;
   }
 }
 
@@ -23,6 +25,7 @@
   .discount-section
   {
     width: var(--card-size);
+    grid-template-rows: 10% 60%;
   }
 }
 
@@ -35,12 +38,11 @@
   padding: 12px;
   color:var(--basic-color);
   font-weight: bold;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 70%;
   margin-top: var(--content-spacing);
   grid-template-rows: 2fr repeat(2, 1fr);
 }
-
 
 .input-discount-section
 {

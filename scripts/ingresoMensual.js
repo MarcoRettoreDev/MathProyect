@@ -6,59 +6,74 @@ let gasto = [0];        // List Gasto
 // Funciones para agregar items
 function nuevoIngreso (monto)
 {
-  ingresoTotal.push(monto);
-  const container = document.getElementById('income-field-id'); // Div container
-  const div = document.createElement('div') // creamos un nuevo elemento div
-  const img = document.createElement('img') // creamos elemento img
+  if (monto !== 0)
+  {
+    ingresoTotal.push(monto);
+    const container = document.getElementById('income-field-id'); // Div container
+    const div = document.createElement('div') // creamos un nuevo elemento div
+    const img = document.createElement('img') // creamos elemento img
 
-  // div
-  div.setAttribute('class', 'income-line line'); // añadimos los atributos DIV
-  div.setAttribute('id', 'income-line')
-  container.append(div); // pegamos el DIV como primer hijo del container
-  // p
-  const p = document.createElement('p') // creamos un nuevo elemento p
-  p.textContent = monto; // añadimos el texto al elemento p
-  p.setAttribute('id', 'income-value') // añadimos el id para poder borrar el elemento
+    // div
+    div.setAttribute('class', 'income-line line'); // añadimos los atributos DIV
+    div.setAttribute('id', 'income-line')
+    container.append(div); // pegamos el DIV como primer hijo del container
+    // p
+    const p = document.createElement('p') // creamos un nuevo elemento p
+    p.textContent = monto; // añadimos el texto al elemento p
+    p.setAttribute('id', 'income-value') // añadimos el id para poder borrar el elemento
 
-  // img
-  img.setAttribute('type', 'image'); // atributos img
-  img.setAttribute('class', 'btn-close'); 
-  img.setAttribute('src', '/icons/icon_close.png');
-  img.setAttribute('onclick', 'deleteIngreso(this)');
-  
-  div.appendChild(p); // agregamos el hijo a nuestra lista
-  div.appendChild(img);
+    // img
+    img.setAttribute('type', 'image'); // atributos img
+    img.setAttribute('class', 'btn-close'); 
+    img.setAttribute('src', '/icons/icon_close.png');
+    img.setAttribute('onclick', 'deleteIngreso(this)');
+    
+    div.appendChild(p); // agregamos el hijo a nuestra lista
+    div.appendChild(img);
 
-  clearInput(); // Borramos el contenido del input
+    clearInput(); // Borramos el contenido del input
+  }
+  else
+  {
+
+  };
 };
 
 function nuevoGasto (monto) 
 {
-  gasto.push(monto);
-  const container = document.getElementById('expense-field-id'); 
-  const div = document.createElement('div') 
-  const img = document.createElement('img') 
-
+  if (monto !== 0)
+  {
+    gasto.push(monto);
+    const container = document.getElementById('expense-field-id'); 
+    const div = document.createElement('div') 
+    const img = document.createElement('img') 
   
-
-  div.setAttribute('class', 'expense-line line');
-  div.setAttribute('id', 'expense-line')
-  container.append(div); 
-
-  const p = document.createElement('p') 
-  p.textContent = monto;
-
-
-  img.setAttribute('type', 'image'); 
-  img.setAttribute('class', 'btn-close'); 
-  img.setAttribute('src', '/icons/icon_close.png');
-  img.setAttribute('onclick', 'deleteGasto(this)');
+    
+  
+    div.setAttribute('class', 'expense-line line');
+    div.setAttribute('id', 'expense-line')
+    container.append(div); 
+  
+    const p = document.createElement('p') 
+    p.textContent = monto;
   
   
-  div.appendChild(p); 
-  div.appendChild(img);
+    img.setAttribute('type', 'image'); 
+    img.setAttribute('class', 'btn-close'); 
+    img.setAttribute('src', '/icons/icon_close.png');
+    img.setAttribute('onclick', 'deleteGasto(this)');
+    
+    
+    div.appendChild(p); 
+    div.appendChild(img);
+  
+    clearInput(); 
+  }
+  else
+  {
 
-  clearInput(); 
+  };
+  
 };
 
 
@@ -146,6 +161,36 @@ function clearInput ()
   return input.value = '';
 }
 
+// Funcion clear all
+
+function clearAll ()
+{
+  const totalIncomes= document.getElementById('income-total-field');
+  totalIncomes.innerText = "";
+  const totalExpenses = document.getElementById('expense-total-field');totalExpenses.innerText = "";
+  const totalBalance = document.getElementById('balance-total-field');
+  totalBalance.innerText = "";
+  const inputField = document.getElementById('input-calculator-field');
+  inputField.innerText = "";
+
+  const lineIncome = document.getElementsByClassName('income-line');
+  const lineExpense = document.getElementsByClassName('expense-line');
+
+  for (var i = lineIncome.length -1 ; i >= 0 ; --i) //Bucle reverso para remover todos los hijos del HTML collection
+  {
+    lineIncome[i].remove();
+  }
+
+  for (var i = lineExpense.length -1 ; i >= 0 ; --i)
+  {
+    lineExpense[i].remove();
+  }
+
+  gasto = [0]; // volvemos los valores de las listas a 0
+  ingresoTotal = [0];
+  clearInput (); // limpia el input
+}
+
 // Porcentaje
  
 const calcularPorcentaje = (ingresos, gastos) =>
@@ -160,7 +205,7 @@ const calcularPorcentaje = (ingresos, gastos) =>
 var modal = document.getElementById("modal-calculator"); // MODAL
 var btnAddIncome = document.getElementById("button-add-income"); // ADD INCOME
 var btnAddExpense = document.getElementById("button-add-expense");// ADD EXPENSE
-var btnSend = document.getAnimations("modal-send");
+var btnClearAll = document.getElementById('clear-all'); // clear All
 var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close the modal
 
 
@@ -168,6 +213,7 @@ var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close 
 
 btnAddIncome.onclick = () =>  nuevoIngreso (input());
 btnAddExpense.onclick = () => nuevoGasto (input());
+btnClearAll.onclick = () => clearAll();
 
 // boton X cerrar menu
 span.onclick = () => span.style.display = "none";

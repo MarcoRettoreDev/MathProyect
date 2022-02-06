@@ -4,48 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <title>Calculo de ingresos y gastos | Curso Practico Javascript</title>
+  <link rel="stylesheet" href="/styles/promedios.css">
+  <link rel="stylesheet" href="/styles/basic.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Mean Median & Mode | Mr Dev</title>
 </head>
 <body>
   <header class="header">
-    <div class="logo-container">
-      <img src="./images/logo demo.png" alt="">
+    <div class="menu-icon">
+      <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" height="100%" fill="#7a7a7a" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
+      </figure>
     </div>
-    <figure class="menu-icon">
-      <img src="./icons/icons-menu-48.png" alt="menu-burger" id="menu-burger">
-    </figure>
-    <nav class= "navbar navbar-wrapper" id='navbar-wrapper'>
-      <ol class="navbar-content">
-        <li>
-          <a href="/"> Home</a>
-        </li>
-        <li>
-          <a href="/pages/proyects.html"> Proyects</a>
-        </li>
-        <li>
-          <a href="/pages/about.html"> About me</a>
-        </li>
-        <li>
-          <a href="/pages/contact.html"> Contact</a>
-        </li>
-        <span class="menu-close">&times; </span>
-      </ol>
+    <nav class="navbar-content">
+      <div class="home-content">
+        <a href="/" class="btn-index animated-button thar-one"><span>Home</span></a>
+      </div>
+      <div class="proyects-content">
+        <a href="/pages/projects.html" class="btn-index animated-button thar-two"> <span>Projects</span></a>
+      </div>
+      <div class="about-content">
+        <a href="/pages/about.html" class="btn-index animated-button thar-three"> <span>About</span></a>
+      </div>
+      <div class="contact-content">
+        <a href="/pages/contact.html" class="btn-index animated-button thar-four"> <span>Contact</span></a>
+      </div>
+      <span class="menu-close">&times; </span>
     </nav>
     <div class="menu-wrapper">
       <ol class="menu-content">
         <li>
-          <a href="/figuras.html"> Figuras Geométricas</a>
+          <a href="/index.html"> Home</a>
         </li>
         <li>
-          <a href="/promedios.html"> Promedios</a>
+          <a href="/pages/projects.html"> Projects</a>
         </li>
         <li>
-          <a href="/discounts.html"> Descuentos</a>
+          <a href="/pages/about.html"> About</a>
         </li>
         <li>
-          <a href="/ingresoMensual.html"> Ingreso Mensual</a>
+          <a href="/pages/contact.html"> Contact</a>
         </li>
         <span class="menu-close">&times; </span>
       </ol>
@@ -93,66 +94,8 @@
         <p id="mode-result"></p>
       </div>
     </div>
-    <div>
-      <h2 class="subtitle"> Here is an example list</h2>
-      <div class="example-field">
-        <p>4584</p>
-        <p>4894</p>
-        <p>2634</p>
-        <p>2356</p>
-        <p>1524</p>
-        <p>1663</p>
-        <p>5420</p>
-        <p>2560</p>
-        <p>2500</p>
-        <p>1640</p>
-        <p>2000</p>
-        <p>2050</p>
-        <p>3120</p>
-        <p>3420</p>
-        <p>3650</p>
-        <p>3751</p>
-        <p>2640</p>
-        <p>1640</p>
-        <p>2540</p>
-        <p>2650</p>
-        <p>5321</p>
-        <p>6640</p>
-        <p>7540</p>
-        <p>2540</p>
-        <p>2310</p>
-        <p>3501</p>
-        <p>2650</p>
-        <p>6540</p>
-        <p>5810</p>
-        <p>2650</p>
-        <p>3560</p>
-        <p>3620</p>
-        <p>6402</p>
-        <p>2540</p>
-        <p>2650</p>
-        <p>2635</p>
-        <p>3520</p>
-        <p>3640</p>
-        <p>3102</p>
-        <p>3350</p>
-        <p>3560</p>
-        <p>3674</p>
-        <p>4985</p>
-        <p>6520</p>
-        <p>6520</p>
-      </div>
-    </div>
   </section>
-  <footer class="footer-wrapper">
-    <h4 class="footer-text">Copyright © Mr. Dev 2022 </h4>
-    <div class="footer-content">
-      <a href="mailto: marcorettoremattes@gmail.com" subject="subject text"><img src="./icons/icons-email-send-80.png" alt="Email send icon"></a>
-      <a href="https://www.linkedin.com/in/marco-antonio-rettore-mattes/"><img src="./icons/icons-linkedin-60.png" alt="Linkedin icon"></a>
-      <a href="https://github.com/marc0147" target="_blank"><img src="./icons/icons-github-60.png" alt="Github icon"></a>
-    </div>
-  </footer>
-  <script src="./ingresoMensual.js"></script>
-  <script src="./analisis.js"></script>
+  <script src="/scripts/ingresoMensual.js"></script>
+  <script src="/scripts/analisis.js"></script>
 </body>
 </html>
