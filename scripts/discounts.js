@@ -26,6 +26,8 @@ function clearDiscount()
   const inputPrice = document.getElementById('input-price');
   const inputDiscount = document.getElementById('input-discount');
   const field = document.getElementById('result-discount');
+
+
   field.innerHTML = " ";
   inputPrice.value = '';
   inputDiscount.value = '';
@@ -40,6 +42,8 @@ input1.addEventListener('input', calcularPrecioConDescuento);
 const input2 = document.getElementById('input-discount');
 input2.addEventListener('input', calcularPrecioConDescuento);
 
+const btn = document.getElementById('clear-all');
+btn.addEventListener("click" ,clearDiscount);
 
 // boton X cerrar menu
 var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close the modal

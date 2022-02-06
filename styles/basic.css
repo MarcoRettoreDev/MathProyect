@@ -103,10 +103,7 @@
     --title-line-height  : 1.6;
 
     /* Others */
-
     --card-size          :400px;
-
-
   }
 }
 
@@ -128,7 +125,7 @@
     --h3-font-size       : 24px;
     --h4-font-size       : 20px;
     --big-font-size      : 28px;
-    --medium-font-size   : 222px;
+    --medium-font-size   : 22px;
     --normal-font-size   : 18px;
     --small-font-size    : 14px;
     --smaller-font-size  : 12px;
@@ -167,7 +164,7 @@ html
 
 body
 {
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
