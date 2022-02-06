@@ -13,6 +13,7 @@
   <title>Mean Median & Mode | Mr Dev</title>
 </head>
 <body>
+  
   <header class="header">
     <div class="menu-icon">
       <figure>
@@ -37,7 +38,7 @@
     <div class="menu-wrapper">
       <ol class="menu-content">
         <li>
-          <a href="/index.html"> Home</a>
+          <a href="/index.html">Home</a>
         </li>
         <li>
           <a href="/pages/projects.html"> Projects</a>
@@ -54,48 +55,53 @@
   </header>
   
   <section class="salary-section">
-    <div class="text-container">
-      <h1 class="title"> Mean, median & mode </h1>
-      <h2 class="subtitle"> Mean vs Median</h2>
-      <h2 class="subtitle">What's the difference?</h2>
-      <p>Both are measures of where the center of a data set lies (called “Central Tendency” in stats), but they are usually different numbers. For example, take this list of numbers: 10, 10, 20, 40, 70. </p>
-      <p><strong> The mean (informally, the “average“) is found by adding all of the numbers together and dividing by the number of items in the set:</strong> 10 + 10 + 20 + 40 + 70 / 5 = 30.
-      The median is found by ordering the set from lowest to highest and finding the exact middle. 
-      <strong>The median is just the middle number: 20.</strong></p>
-      <p><strong>The mode </strong>is the most common number in a set. For example, the mode in this set of numbers is 21:
-        21, 21, 21, 23, 24, 26, 26, 28</p>
-    </div>
-    <div class="list-field">
-      <h2 class="subtitle">Create a new list:</h2>
+      <h1 class="title">Create a new list:</h1>
       <form action="#" class="list-form">
           <div class="insert-container">
             <div class="input-list-container">
-              <label for="salary">Insert salary</label>
-              <input id="salary-input" type="number" id="salary" placeholder="$" onKeyPress="if (event.which == 13) return false;">
+              <label for="salary">Insert values</label>
+              <input id="salary-input" class="input" placeholder="Ex: 1500, 2500" type="number" id="salary" placeholder="$" onKeyPress="newItemList (salaryInput ,list)">
             </div>
             <div class="buttons-list-container">
-              <button id="add-list" class="send-button" type="button" onclick="newItemList(salaryInput ,list)">Add to list</button>
-              <button id="clear-list" class="send-button clear-button" type="button" onclick="clearList(list)">Clear list</button>
+              <div class = "btn-wrapper btn-efect-in" onclick="clearList(list)">
+                <svg id="clear-list" class="btn-efect-in" mlns="http://www.w3.org/2000/svg" viewBox="-3 -2 24 24" width="100%" fill="#a30d0d"><path d="M6 2V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h4a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-.133l-.68 10.2a3 3 0 0 1-2.993 2.8H5.826a3 3 0 0 1-2.993-2.796L2.137 7H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4zm10 2H2v1h14V4zM4.141 7l.687 10.068a1 1 0 0 0 .998.932h6.368a1 1 0 0 0 .998-.934L13.862 7h-9.72zM7 8a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V9a1 1 0 0 1 1-1zm4 0a1 1 0 0 1 1 1v7a1 1 0 0 1-2 0V9a1 1 0 0 1 1-1z"></path></svg>
+              </div>
+              <div class = "btn-wrapper btn-efect-in" onclick="newItemList(salaryInput ,list)">
+                <svg id="add-list" class="btn-efect-in"  xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="100%" fill="#DEDCE5"><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm7 11v4a1 1 0 0 1-2 0v-4H5a1 1 0 0 1 0-2h4V5a1 1 0 1 1 2 0v4h4a1 1 0 0 1 0 2h-4z"></path></svg>
+              </div>
             </div>
           </div>
-          <div>
-            <p>Your list items are: </p>
+          <div class="list-added-field">
+            <p>List items: </p>
             <p id="list-added"></p>
           </div>
       </form>
-      <div class="buttons-list">
-        <button id="mean-button" class="button-mean button-salary" onclick="mediaAritmetica(list)">Mean</button>
-        <button id="median-button" class="button-media button-salary" onclick="calcularMediana(list)">Median</button>
-        <button id="mode-button" class="button-mode button-salary" onclick="calculateMode(list)">Mode</button>
+      <div class="buttons-calculator-container">
+        <div class="button-field-wrapper">
+          <div class= "btn-wrapper btn-efect-in">
+              <svg id="mean-button" onclick="mediaAritmetica(list)" class="w-6 h-6" fill="#DEDCE5" width="100%" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clip-rule="evenodd"></path></svg>
+            </div>
+            <h3 class="calculate-text">Mean</h3>
+        </div>
+        <div class="button-field-wrapper">
+          <div class= "btn-wrapper btn-efect-in">
+            <svg xmlns="http://www.w3.org/2000/svg" id="median-button" onclick="calcularMediana(list)" width="100%" viewBox="0 0 24 24" fill="#DEDCE5"><path d="M4 19h16v2H4zm3-4h10v2H7zm-3-4h16v2H4zm0-8h16v2H4zm3 4h10v2H7z"></path></svg>
+          </div>
+            <h3 class="calculate-text">Median</h3>
+        </div>
+        <div class="button-field-wrapper">
+          <div class= "btn-wrapper btn-efect-in">
+              <svg xmlns="http://www.w3.org/2000/svg" id="mode-button" onclick="calculateMode(list)" width="100%" viewBox="0 0 24 24" fill="#DEDCE5"><path d="M6 21H3a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1zm7 0h-3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1z"></path></svg>
+            </div>
+            <h3 class="calculate-text">Mode</h3>
+        </div>
       </div>
-      <div class="result-field">
+      <div class="result-field" id="result-field">
         <p id="mean-result"></p>
         <p id="media-result"></p>
         <p id="mode-result"></p>
       </div>
-    </div>
   </section>
-  <script src="/scripts/ingresoMensual.js"></script>
   <script src="/scripts/analisis.js"></script>
 </body>
 </html>

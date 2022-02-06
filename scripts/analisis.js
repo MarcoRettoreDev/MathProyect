@@ -9,18 +9,27 @@ const listadoSorted =  list.sort((a ,b)=>(a - b));
 
 function newItemList (salaryInput ,list) 
 {
-  list.push(Number(salaryInput.value));
-  const listAdded = document.getElementById('list-added');
-  return listAdded.innerText = list.join(', ');
+  if (salaryInput.value != 0) // using != due to salaryInput.value is returning a string
+  {
+    list.push(Number(salaryInput.value));
+    const listAdded = document.getElementById('list-added');
+    return listAdded.innerText = list.join(', ');
+  }
+  else {};
 };
 
 function clearList(list)
 {
   list.length = 0;
   const listAdded = document.getElementById('list-added');
+  
+  document.getElementById('mean-result').innerText = '';
+  document.getElementById('media-result').innerText = '';
+  document.getElementById('mode-result').innerText = '';
+
   salaryInput.value = 0;
-  return listAdded.innerText = "Nothing on your list";
-}
+  listAdded.innerText = '';
+};
 
 function esPar(lista)
 {
@@ -45,7 +54,7 @@ function calcularMediana(lista)
   const listaMitad = Math.floor(listaLength / 2);
   if (lista.length === 0) // si la lista esta vacía, pedimos 3 valores
   {
-    return resultMedian.innerHTML = 'List must be at least with 3 values';
+    return resultMedian.innerHTML = '';
   }
   else
   {
@@ -54,12 +63,12 @@ function calcularMediana(lista)
       const elem1 = lista[listaMitad -1]; // guardamos el valor de la mitad la lista
       const elem2 = lista[listaMitad]; // guardamos el valor siguiente
       const promedio = (elem1 + elem2) / 2; // sacamos el promedio entre los 2 valores
-      return resultMedian.innerHTML = `The median of the list is: $${promedio}`; // devolvemos el resultado
+      return resultMedian.innerHTML = `Median is: $${promedio}`; // devolvemos el resultado
     }
     else // si es impar
     {
       const listaMitadLength = Math.floor(listaLength / 2);
-      return resultMedian.innerHTML = `The median of the list is: $${lista[listaMitadLength]}`; // devolvemos el indice de la lista.
+      return resultMedian.innerHTML = `Median is: $${lista[listaMitadLength]}`; // devolvemos el indice de la lista.
     }
   }
 }
@@ -76,13 +85,14 @@ function mediaAritmetica (lista)
 
   const resultMean = document.getElementById('mean-result');
 
-  return resultMean.innerHTML = `The mean of the list is: $${(Math.round(promedioLista * 100) / 100).toFixed(2)}`;
+  return resultMean.innerHTML = `Mean is: $${(Math.round(promedioLista * 100) / 100).toFixed(2)}`;
 }
 
 // Cálculo de moda
 
 function calculateMode(list)
 {
+  
   const listObj = {};
   list.map((e)=>
   {
@@ -102,7 +112,7 @@ function calculateMode(list)
   });
   const resultMode = document.getElementById('mode-result');
   const moda = listArray[listArray.length - 1];
-  return resultMode.innerHTML = `The mode is: $${moda[0]} , it repeats:  ${moda[1]} times inside the list.`;
+  return resultMode.innerHTML = `Mode is: $${moda[0]}, repeats: ${moda[1]} times`;
 }
 
 
@@ -125,6 +135,20 @@ const median = document.getElementById('median-button');
 const mode = document.getElementById('mode-button');
 
 const salaryInput = document.getElementById('salary-input');
+salaryInput.addEventListener('keydown', (evt) => 
+{
+  if (evt.key == "Enter")
+  {
+    newItemList(salaryInput, list);
+  }
+  else
+  {
+  }
+});
+// element.addEventListener('dragstart',(evt) => onDragStart(param1, param2, param3, evt));
+// Result field
+
+const resultField = document.getElementById('result-field');
 
 // MENU BURGER RWD
 var btnMenuBurger = document.getElementById('menu-burger');

@@ -36,6 +36,7 @@
   --body-line-height   : 1.6;
   --title-line-height  : 1.4;
   --normal-button-padding: 8px 16px;
+  --basic-padding: 4px 8px;
 
   /* CARDS */
   --card-size: 240px;
@@ -198,6 +199,11 @@ body
   color:var(--basic-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+}
+
+.input
+{
+  border-radius: var(--border-radius);
 }
 
 /* Buttons */

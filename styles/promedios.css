@@ -1,0 +1,158 @@
+
+.salary-section
+{
+  display:grid;
+  place-content: center;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 2fr 1fr 1fr;
+}
+
+@media screen and (min-width: 810px)
+{
+  .salary-section
+  {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px)
+{
+  .salary-section
+  {
+    width: 30%;
+    row-gap: 20px;
+  }
+}
+
+.salary-section h1
+{
+  margin: 0;
+  text-align: center;
+}
+
+.list-form
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.insert-container
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.input-list-container
+{
+  display:flex;
+  justify-content: space-around;
+
+  color:var(--basic-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.input-list-container label
+{
+  justify-self: center;
+  align-self: center;
+  font-weight: bold;
+}
+
+#salary-input
+{
+  color: var(--black);
+  padding: var(--basic-padding);
+  text-align: center;
+
+  width: 40%;
+}
+
+.buttons-list-container
+{
+  display:flex;
+  justify-content: space-around;
+  margin-top: var(--content-spacing);
+}
+
+
+.btn-wrapper /* Tamaño boton Add y clear */
+{
+  width: 42px;
+}
+
+.list-added-field
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  height: 200px;
+  width: 100%;
+  overflow-y: scroll;
+
+  box-shadow: var(--box-shadow);
+  padding: var(--basic-padding);
+
+  color: var(--basic-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+@media screen and (min-width: 810px)
+{
+  .list-added-field
+  {
+    overflow-y: auto;
+  }
+}
+
+.list-added-field p:first-child
+{
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.buttons-calculator-container
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-field-wrapper
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.result-field
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+
+  box-shadow: var(--box-shadow);
+  padding: var(--basic-padding);
+
+  color:var(--basic-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.result-field p 
+{
+  height: 25px;
+}
