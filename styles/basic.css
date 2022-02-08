@@ -43,7 +43,7 @@
   --project-card-size: 300px;
 
   /* TAMAÑOS DE FUENTES */
-  --h1-font-size       : 24px;
+  --h1-font-size       : 26px;
   --h2-font-size       : 20px;
   --h3-font-size       : 16px;
   --h4-font-size       : 14px;
@@ -91,7 +91,7 @@
     --normal-button-padding: 8px 16px;
 
     /* TAMAÑOS DE FUENTES */
-    --h1-font-size       : 28px;
+    --h1-font-size       : 30px;
     --h2-font-size       : 24px;
     --h3-font-size       : 20px;
     --h4-font-size       : 18px;
@@ -183,7 +183,7 @@ body
 
 .subtitle
 {
-  color:var(--text-input-field);
+  color:var(--card-text);
   font-family: var(--buttons-index-font);
   font-size: var(--h2-font-size);
 }
@@ -204,6 +204,8 @@ body
 .input
 {
   border-radius: var(--border-radius);
+  color: var(--black);
+  padding: 4px 8px;
 }
 
 /* Buttons */
@@ -343,11 +345,6 @@ body
     height: var(--header-height);
   }
   
-  .navbar-content div
-  {
-    margin-right: 56px;
-  }
-
   .navbar-content div a
   {
     text-decoration: none;
@@ -358,7 +355,8 @@ body
     text-align: center;
     position: relative;
     transition: all .35s;
-    padding: var(--normal-button-padding)
+    padding: var(--normal-button-padding);
+    margin-right: 56px;
   }
 }
 

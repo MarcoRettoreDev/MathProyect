@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="/styles/basic.css">
+  <link rel="stylesheet" href="/styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <title>Mr. Dev | Web Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title> Web Portfolio | Mr Dev</title>
 </head>
-
 <body>
+  
   <header class="header">
-    <figure class="menu-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" width="36" fill="#DEDCE5" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
-    </figure>
+    <div class="menu-icon">
+      <figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" height="100%" fill="#DEDCE5" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
+      </figure>
+    </div>
     <nav class="navbar-content">
       <div class="home-content">
-        <a href="/" class="btn-index animated-button thar-one"><span>Home</span></a>
+        <div class="img-logo-container">
+          <img src="/images/logo demo.png" alt="">
+        </div>
+        <!-- <a href="/" class="btn-index animated-button thar-one"><span>Home</span></a> -->
       </div>
       <div class="proyects-content">
         <a href="/pages/projects.html" class="btn-index animated-button thar-two"> <span>Projects</span></a>
@@ -35,7 +41,7 @@
     <div class="menu-wrapper">
       <ol class="menu-content">
         <li>
-          <a href="/index.html"> Home</a>
+          <a href="/index.html">Home</a>
         </li>
         <li>
           <a href="/pages/projects.html"> Projects</a>

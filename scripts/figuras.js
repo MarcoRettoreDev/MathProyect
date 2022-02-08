@@ -19,7 +19,6 @@ function perimetroTriangulo (lado1,lado2,base)
   return lado1 + lado2 + base;
 }
 
-
 function  areaTriangulo (base, altura)
 {
   return (base * altura) / 2;
@@ -114,33 +113,46 @@ function clearSquareResult ()
 
 function calcularPerimetroTriangulo()
 {
-  const inputside1 = document.getElementById('input-side-1'); // lado1
-  const inputside2 = document.getElementById('input-side-2'); // lado2
+  const inputside1 = document.getElementById('input-side-1'); // lado
+  const inputside2 = document.getElementById('input-side-1');
   const inputbase = document.getElementById('input-base'); // base
   const value1 = parseInt(inputside1.value);
   const value2 = parseInt(inputside2.value);
   const valuebase = parseInt(inputbase.value);
-  const perimetrotriangulo = perimetroTriangulo(value1,value2,valuebase);
-
   const result = document.getElementById('result-triangle-perimeter'); // result var
-  result.innerHTML = (`${perimetrotriangulo} cm`); // print the result
+  if (value1 > valuebase)
+  {
+    const perimetrotriangulo = perimetroTriangulo(value1,value2,valuebase);
+    result.innerHTML = (`${perimetrotriangulo} cm`); // print the result
+  }
+  else
+  {
+    result.innerHTML = ('Side lower than Base');
+  }
 }
 
 function calcularAreaTriangulo()
 {
-  const inputside1 = document.getElementById('input-side-1'); // lado1
-  const inputside2 = document.getElementById('input-side-2'); // lado2
+  const inputside1 = document.getElementById('input-side-1'); // lado
+  const inputside2 = document.getElementById('input-side-1');
   const inputbase = document.getElementById('input-base'); // base
   const value1 = parseInt(inputside1.value);
   const value2 = parseInt(inputside2.value);
   const valuebase = parseInt(inputbase.value);
-
-  // console.log(value1, value2, valuebase)
-  const altura = alturaTrianguloIsoceles(value1,value2,valuebase);
-  const areatriangulo = areaTriangulo(valuebase, altura);
-
   const result = document.getElementById('result-triangle-area'); // result var
-  result.innerHTML = (`${areatriangulo} cm²`); // print the result
+
+  if (value1 > valuebase) // comprobamos que el Lado sea mayor que la base
+  {
+    // calculamos altura triangulo
+    const altura = alturaTrianguloIsoceles(value1,value2,valuebase);
+    // pasamos la constante como parámetro en nuestra funcion
+    const areatriangulo = areaTriangulo(valuebase, altura);
+    result.innerHTML = (`${areatriangulo.toFixed(2)} cm²`); // print the result
+  }
+  else
+  {
+    result.innerHTML = ('Side lower than Base'); // lower
+  }
 }
 
 function clearTriangleResult()
@@ -148,13 +160,12 @@ function clearTriangleResult()
   const result = document.getElementById('result-triangle-perimeter');
   const result2 = document.getElementById('result-triangle-area');
   const inputside1 = document.getElementById('input-side-1'); 
-  const inputside2 = document.getElementById('input-side-2'); 
   const inputbase = document.getElementById('input-base');
   result2.textContent = " ";
   result.textContent = " ";
   inputside1.value = " ";
-  inputside2.value = " ";
   inputbase.value = " ";
+  inputbase.textContent = '';
 }
 
 
@@ -167,7 +178,7 @@ function calcularPerimetroCirculo()
   const calculoPerimetroCirculo = perimetroCirculo(value);
   
   const result = document.getElementById('result-circle-circumference'); // result var
-  result.innerHTML = (`${calculoPerimetroCirculo} cm`);
+  result.innerHTML = (`${calculoPerimetroCirculo.toFixed(3)} cm`);
 }
 
 function calcularAreaCirculo()
@@ -177,8 +188,9 @@ function calcularAreaCirculo()
   const calculoAreaCirculo = areaCirculo(value);
 
   const result = document.getElementById('result-circle-area'); // result var
-  result.innerHTML = (`${calculoAreaCirculo} cm²`);
+  result.innerHTML = (`${calculoAreaCirculo.toFixed(3)} cm²`);
 }
+
 function clearCircleResult()
 {
   const result = document.getElementById('result-circle-circumference');
