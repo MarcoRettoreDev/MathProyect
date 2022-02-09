@@ -17,8 +17,10 @@
   /* BACKGROUND */
   --background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,5,5,1) 18%, rgba(7,7,7,1) 36%, rgba(17,17,17,1) 52%, rgba(21,21,21,1) 70%, rgba(32,32,32,1) 86%, rgba(37,37,37,1) 100%);
   --background-opacity: #0f0f0fd5;
+  --background-dark-opacity: #313131ad;
 
   --card-text-background: hsl(255, 20%, 5%);
+  --about-modal-background: rgba(109, 109, 109, 0.561);
   
   /* FUENTES */
   --body-font : 'Quicksand', sans-serif;
@@ -255,6 +257,7 @@ body
   font-size: var(--h4-font-size);
   font-weight: bold;
 }
+
 
 .geometry-button
 {
