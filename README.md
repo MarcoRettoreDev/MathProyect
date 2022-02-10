@@ -1,24 +1,28 @@
-# curso-practica-javascript
+# Starting! 🚀
+ Hi! Welcome to my first web portfolio, this is my first project online, hope to enjoy my page and if you want to connect with me on the page you will find my contact info! 
+ Greetings!
 
-...
+ Hola! Bienvenido/a a mi primer web portafolio, esta es mi primer proyecto online, espero que sea de tu agrado y si quieres contactarte conmigo encontrarás la información dentro de la web.
+ Saludos!
 
-## Taller #1: figuras geométricas
 
-- Primer paso: definir las fórmulas
-- Segundo paso: implementar estas fórmulas en js.
-- Tercero paso: crear funciones.
-- Cuarto paso: integrar js con html.
+# V1.0: First web presentation and projects
 
-## Taller #2: figuras geométricas.
+## First projects 💻
 
- - Primer paso: definir las fórmulas.
- - Segundo paso: implementar la fórmula en js.
- - Tercer paso: cercar funciones.
- - Cuarto paso: integrar JS con HTML.
+* Discount & Calculator
+* Geometry Calculator
+* Mean Median y Mode of a list
+* Income and expense app register
 
- ## Taller #3: Estadísticas: promedio, mediana y mode.
+- Simple about and contact section
 
- - Primer paso: definir las fórmulas.
- - Segundo paso: implementar la fórmula en js.
- - Tercer paso: cercar funciones.
- - Cuarto paso: integrar JS con HTML.
+## Built With 🛠️
+
+* CSS
+* HTML
+* JS
+
+
+
+
