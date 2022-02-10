@@ -11,7 +11,7 @@
   --orange:#c0741d;
   --red: #a30d0d;
   --green: #167e04;
-
+  --grey : #424242b7;
   --transparent: transparent;
 
   /* BACKGROUND */
@@ -21,6 +21,7 @@
 
   --card-text-background: hsl(255, 20%, 5%);
   --about-modal-background: rgba(109, 109, 109, 0.561);
+  --text-background: rgba(207, 207, 207, 0.623);
   
   /* FUENTES */
   --body-font : 'Quicksand', sans-serif;
@@ -67,8 +68,7 @@
 
   /* OTROS */
   --border-radius : 0.5rem;
-  --box-shadow : 2px 2px 5px 1px rgba(216, 216, 216, 0.39), 
-               -2px -2px 5px 1px rgba(216, 216, 216, 0.39);
+  --box-shadow : 0px 8px 24px rgba(255, 255, 255, 0.2);
   --primary-button-width: 120px;
   --primary-button-height: 40px;
   --line-item-width: 100px;
@@ -77,6 +77,9 @@
   /* Sombras */
   --button-index-shadow: 1px 1px 1px rgba(128, 128, 128, 0.452),
                         -1px -1px 1px rgba(128, 128, 128, 0.452);
+
+  --box-dark-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.39), 
+               -2px -2px 5px 1px rgba(0, 0, 0, 0.39);
 }
 
 
@@ -96,7 +99,7 @@
     --h1-font-size       : 30px;
     --h2-font-size       : 24px;
     --h3-font-size       : 20px;
-    --h4-font-size       : 18px;
+    --h4-font-size       : 16px;
     --big-font-size      : 24px;
     --medium-font-size   : 20px;
     --normal-font-size   : 16px;
@@ -371,7 +374,8 @@ body
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  overflow: auto; /* Enable scroll if needed */
+  height: 100vh;
+  overflow:auto; /* Enable scroll if needed */
   background-color: var(--black); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.219); /* Black w/ opacity */
 }
@@ -386,7 +390,7 @@ body
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   list-style: none;
   transition: all 1s;
   font-size: var(--h4-font-size);
