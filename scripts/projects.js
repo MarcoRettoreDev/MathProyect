@@ -1,5 +1,4 @@
 
-
 function hideText(id) // funcion mostrar texto card
 {
   var el = document.getElementById(id); //traemos elemento padre y buscamos su hijo para cambiar HTML style (mala práctica)
