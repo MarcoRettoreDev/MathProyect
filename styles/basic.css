@@ -36,8 +36,8 @@
   --footer-height:     : 20px;
   --section-spacing    : 36px;
   --content-spacing    : 24px;
-  --body-line-height   : 1.6;
-  --title-line-height  : 1.4;
+  --body-line-height   : 1.6rem;
+  --title-line-height  : 1.4rem ;
   --normal-button-padding: 8px 16px;
   --basic-padding: 4px 8px;
 
@@ -46,15 +46,15 @@
   --project-card-size: 300px;
 
   /* TAMAÑOS DE FUENTES */
-  --h1-font-size       : 26px;
-  --h2-font-size       : 20px;
-  --h3-font-size       : 16px;
-  --h4-font-size       : 14px;
-  --big-font-size      : 20px;
-  --medium-font-size   : 18px;
-  --normal-font-size   : 16px;
-  --small-font-size    : 12px;
-  --smaller-font-size  : 8px;
+  --h1-font-size       : 2.6rem;
+  --h2-font-size       : 2.0rem;
+  --h3-font-size       : 1.6rem;
+  --h4-font-size       : 1.4rem;
+  --big-font-size      : 2.0rem;
+  --medium-font-size   : 1.8rem;
+  --normal-font-size   : 1.6rem;
+  --small-font-size    : 1.2rem;
+  --smaller-font-size  : .8rem;
 
   /* CAPAS */
   --z-back             : -10;
@@ -68,7 +68,7 @@
 
   /* OTROS */
   --border-radius : 0.5rem;
-  --box-shadow : 0px 8px 24px rgba(255, 255, 255, 0.2);
+  --box-shadow : 0px 6px 24px rgba(255, 255, 255, 0.568);
   --primary-button-width: 120px;
   --primary-button-height: 40px;
   --line-item-width: 100px;
@@ -82,38 +82,24 @@
                -2px -2px 5px 1px rgba(0, 0, 0, 0.39);
 }
 
-
-@media screen and (min-width: 810px)
+@media screen and (min-width: 768px)
 {
-  /* VARIABLES DE TAMAÑO DESKTOP */
   :root
   {
-    --normal-button-padding: 12px 20px;
-    --header-height        : 56px;
-    --section-spacing      : 56px;
-    --body-line-height     : 1.6;
-    --title-line-height    : 1.4;
-    --normal-button-padding: 8px 16px;
-
-    /* TAMAÑOS DE FUENTES */
-    --h1-font-size       : 30px;
-    --h2-font-size       : 24px;
-    --h3-font-size       : 20px;
-    --h4-font-size       : 16px;
-    --big-font-size      : 24px;
-    --medium-font-size   : 20px;
-    --normal-font-size   : 16px;
-    --small-font-size    : 14px;
-    --smaller-font-size  : 10px;
-
-    --title-line-height  : 1.6;
-
-    /* Others */
-    --card-size          :400px;
+    --h1-font-size       : 2.8rem;
+    --h2-font-size       : 2.2rem;
+    --h3-font-size       : 1.8rem;
+    --h4-font-size       : 1.6rem;
+    --big-font-size      : 2.2rem;
+    --medium-font-size   : 2.0rem;
+    --normal-font-size   : 1.8rem;
+    --small-font-size    : 1.4rem;
+    --smaller-font-size  : 1rem;
   }
 }
 
-@media screen and (min-width: 1024px)
+
+@media screen and (min-width: 1366px)
 {
   /* VARIABLES DE TAMAÑO DESKTOP */
   :root
@@ -126,22 +112,21 @@
 
 
     /* TOMAÑOS DE FUENTES */
-    --h1-font-size       : 32px;
-    --h2-font-size       : 28px;
-    --h3-font-size       : 24px;
-    --h4-font-size       : 20px;
-    --big-font-size      : 28px;
-    --medium-font-size   : 22px;
-    --normal-font-size   : 18px;
-    --small-font-size    : 14px;
-    --smaller-font-size  : 12px;
+    --h1-font-size       : 3.0rem;
+    --h2-font-size       : 2.6rem;
+    --h3-font-size       : 2.4rem;
+    --h4-font-size       : 2.0rem;
+    --big-font-size      : 2.8rem;
+    --medium-font-size   : 2.2rem;
+    --normal-font-size   : 1.6rem;
+    --small-font-size    : 1.4rem;
+    --smaller-font-size  : 1.2rem;
 
-    --title-line-height  : 1.8;
+    --title-line-height  : 2.4rem;
 
-    --card-size          :400px;
+    --card-size          : 400px;
   }
 }
-
 
 /* Configuracion general */
 *,
@@ -166,11 +151,12 @@ input::-webkit-inner-spin-button {
 html
 {
   min-height: 100%;
+  font-size: 62.5%;
 }
 
 body
 {
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -183,7 +169,6 @@ body
   color:var(--basic-color);
   font-family: var(--buttons-index-font);
   font-size:var(--h1-font-size);
-  line-height: var(--title-line-height);
 }
 
 .subtitle
@@ -191,12 +176,6 @@ body
   color:var(--card-text);
   font-family: var(--buttons-index-font);
   font-size: var(--h2-font-size);
-}
-
-.h3
-{
-  color:var(--basic-color);
-  font-size: var(--h3-font-size);
 }
 
 .text
@@ -347,7 +326,7 @@ body
   {
     display:flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     height: var(--header-height);
   }
   
@@ -473,4 +452,3 @@ body
     display:none;
   }
 }
-

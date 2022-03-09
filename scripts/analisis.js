@@ -2,20 +2,23 @@
 let list = []; 
 
 // Lista de salarios ordenada:
-
 const listadoSorted =  list.sort((a ,b)=>(a - b));
 
 // Helpers
 
 function newItemList (salaryInput ,list) 
 {
-  if (salaryInput.value != 0) // using != due to salaryInput.value is returning a string
+  let number = salaryInput.value;
+  if (number != 0) // using != due to salaryInput.value is returning a string
   {
-    list.push(Number(salaryInput.value));
+    list.push(Number(number));
     const listAdded = document.getElementById('list-added');
     return listAdded.innerText = list.join(', ');
   }
-  else {};
+  else 
+  {
+    null
+  };
 };
 
 function clearList(list)
@@ -135,17 +138,18 @@ const median = document.getElementById('median-button');
 const mode = document.getElementById('mode-button');
 
 const salaryInput = document.getElementById('salary-input');
-salaryInput.addEventListener('keydown', (evt) => 
+salaryInput.addEventListener('keydown', (e) => 
 {
-  if (evt.key == "Enter")
+  if (e.key == "Enter")
   {
     newItemList(salaryInput, list);
+    salaryInput.value = "";
   }
   else
   {
+    null
   }
 });
-// element.addEventListener('dragstart',(evt) => onDragStart(param1, param2, param3, evt));
 // Result field
 
 const resultField = document.getElementById('result-field');

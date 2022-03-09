@@ -4,28 +4,12 @@
   display:grid;
   place-content: center;
   width: 90%;
+  max-width: 450px;
   height: 90%;
   margin: 0 auto;
 
   grid-template-columns: 1fr;
   grid-template-rows: 40px 2fr 1fr 1fr;
-}
-
-@media screen and (min-width: 810px)
-{
-  .salary-section
-  {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 1024px)
-{
-  .salary-section
-  {
-    width: 30%;
-    row-gap: 20px;
-  }
 }
 
 .salary-section h1
@@ -97,7 +81,7 @@
   align-content: center;
   height: 200px;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   box-shadow: var(--box-shadow);
   padding: var(--basic-padding);
@@ -105,14 +89,6 @@
   color: var(--basic-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-}
-
-@media screen and (min-width: 810px)
-{
-  .list-added-field
-  {
-    overflow-y: auto;
-  }
 }
 
 .list-added-field p:first-child
@@ -135,6 +111,11 @@
   align-items: center;
 
   cursor: pointer;
+}
+
+.calculate-text
+{
+  color: var(--white);
 }
 
 .result-field

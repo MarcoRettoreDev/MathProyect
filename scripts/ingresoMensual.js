@@ -6,7 +6,7 @@ let gasto = [0];        // List Gasto
 // Funciones para agregar items
 function nuevoIngreso (monto)
 {
-  if (monto !== 0)
+  if (monto !== 0 & monto === Number)
   {
     ingresoTotal.push(monto);
     const container = document.getElementById('income-field-id'); // Div container
@@ -35,20 +35,18 @@ function nuevoIngreso (monto)
   }
   else
   {
-
+    return null
   };
 };
 
 function nuevoGasto (monto) 
 {
-  if (monto !== 0)
+  if (monto !== 0 & monto === Number)
   {
     gasto.push(monto);
     const container = document.getElementById('expense-field-id'); 
     const div = document.createElement('div') 
     const img = document.createElement('img') 
-  
-    
   
     div.setAttribute('class', 'expense-line line');
     div.setAttribute('id', 'expense-line')
@@ -57,12 +55,10 @@ function nuevoGasto (monto)
     const p = document.createElement('p') 
     p.textContent = monto;
   
-  
     img.setAttribute('type', 'image'); 
     img.setAttribute('class', 'btn-close'); 
     img.setAttribute('src', '/icons/icon_close.png');
     img.setAttribute('onclick', 'deleteGasto(this)');
-    
     
     div.appendChild(p); 
     div.appendChild(img);
@@ -71,11 +67,9 @@ function nuevoGasto (monto)
   }
   else
   {
-
+    return null
   };
-  
 };
-
 
 // Funcion borrar item
 const deleteIngreso = (el) =>
@@ -99,10 +93,10 @@ const deleteGasto = (el) =>
 }
 
 // Funcion leer input event
-function input () // input
-{ 
+function input ()
+{
   const input = Number(document.getElementById("input-calculator-field").value);
-  return input
+  return input;
 }
 
 // Funciones para sumar
@@ -116,7 +110,6 @@ function sumarIngresos() // suma todos los ingresos de la lista
   return resultado;
 };
 
-
 function sumarGastos() // suma todos los gastos de la lista
 {
   let resultado = gasto.reduce((a ,b)=> a + b);
@@ -124,8 +117,6 @@ function sumarGastos() // suma todos los gastos de la lista
   field.textContent = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`;
   return resultado;
 };
-
-
 
 // Funciones para restar
 
@@ -138,7 +129,7 @@ function borrarIngreso(value)  // borra la linea especifica de ingreso
 function borrarGasto(valor)  // borra la linea especifica de gasto
 { 
   const index = gasto.indexOf(valor);
-  gasto.splice(index, 1);
+  return gasto.splice(index, 1);
 };
 
 // Funcion balance
@@ -199,7 +190,6 @@ const calcularPorcentaje = (ingresos, gastos) =>
   return calc; // retorna el porcentaje en numero entero. (agregar '%' )
 };
 
-
 // HTML INPUTS
 
 var modal = document.getElementById("modal-calculator"); // MODAL
@@ -207,7 +197,6 @@ var btnAddIncome = document.getElementById("button-add-income"); // ADD INCOME
 var btnAddExpense = document.getElementById("button-add-expense");// ADD EXPENSE
 var btnClearAll = document.getElementById('clear-all'); // clear All
 var span = document.getElementsByClassName("menu-wrapper")[0]; // span to close the modal
-
 
 // HTML ACTIONS
 

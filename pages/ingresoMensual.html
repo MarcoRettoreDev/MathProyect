@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/ingresoMensual.css">
   <link rel="stylesheet" href="/styles/basic.css">
-  <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -54,7 +53,7 @@
   </header>
   
   <section class="calculator-section">
-    <h1 class="title"> Income and expense calculator</h1>
+    <h1 class="title"> Income and expense</h1>
     <div class="calculator-card">
       <div class="box-wrapper">
         <div id="income-field-id">
@@ -67,7 +66,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="box-wrapper">
         <div id="expense-field-id">
           <div class="total-field">
@@ -85,9 +84,7 @@
           <h3 class="h3">Balance: </h3>
           <p id="balance-total-field"></p>
         </div>
-        <div class="input-calculator-field">
-          <input type="text" id="input-calculator-field" class="input" placeholder="0" onkeypress="input()">
-        </div>
+        <input class="input-calculator-field" type="text" id="input-calculator-field" class="input" placeholder="0" onkeypress="input()">
       </div>
       <div class="button-calculator-section">
         <div class="btn-wrapper">

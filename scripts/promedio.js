@@ -44,7 +44,6 @@ function calcularMediana(lista)
   }
 }
 
-
 // MODA
 
 function calculateMode(list)
