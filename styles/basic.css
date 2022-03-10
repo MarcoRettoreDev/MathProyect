@@ -154,6 +154,11 @@ html
   font-size: 62.5%;
 }
 
+.header
+{
+  width: 100%;
+}
+
 body
 {
   height: 100vh;
@@ -241,7 +246,6 @@ body
   font-weight: bold;
 }
 
-
 .geometry-button
 {
   display:inline-block;
@@ -262,14 +266,12 @@ body
   filter: saturate(150%);
 }
 
-
 .geometry-button + .reset
 {
   border: 2px solid var(--red);
   box-shadow: 2px 2px 5px 1px var(--red), 
   -2px -2px 5px 1px var(--red);
 }
-
 
 .button-salary
 {

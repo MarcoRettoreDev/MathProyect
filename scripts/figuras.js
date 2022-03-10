@@ -178,7 +178,7 @@ function calcularPerimetroCirculo()
   const calculoPerimetroCirculo = perimetroCirculo(value);
   
   const result = document.getElementById('result-circle-circumference'); // result var
-  result.innerHTML = (`${calculoPerimetroCirculo.toFixed(3)} cm`);
+  result.innerHTML = (`${calculoPerimetroCirculo.toFixed(2)} cm`);
 }
 
 function calcularAreaCirculo()
@@ -188,7 +188,7 @@ function calcularAreaCirculo()
   const calculoAreaCirculo = areaCirculo(value);
 
   const result = document.getElementById('result-circle-area'); // result var
-  result.innerHTML = (`${calculoAreaCirculo.toFixed(3)} cm²`);
+  result.innerHTML = (`${calculoAreaCirculo.toFixed(2)} cm²`);
 }
 
 function clearCircleResult()

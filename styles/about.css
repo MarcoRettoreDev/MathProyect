@@ -1,241 +1,39 @@
 .about-section
 {
-  display:grid;
   width: 90%;
-  margin: 0 auto;
-}
-
-.about-section h1
-{
-  text-align: center;
+  height: 100%;
+  margin: 16px auto;
 }
 
 .about-wrapper
 {
   display:grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2 ,1fr);
-  row-gap: 64px;
-
-  margin-bottom: var(--section-spacing);
-}
-
-@media screen and (min-width: 1024px)
-{
-  .about-wrapper
-  {
-    grid-template-columns: repeat(2 ,1fr);
-    grid-template-rows: 1fr;
-    place-items:space-around;
-  }
+  place-content: center;
+  height: 70%;
+  width: 100%;
+  margin:0 auto;
 }
 
 .about-card
 {
-  width: 320px;
-  height: 430px;
-  padding: var(--basic-padding);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-@media screen and (min-width: 810px)
-{
-  .about-card
-  {
-    width: 360px;
-  }
-}
-
-.img-card-wrapper
-{
-  width: 100%;
-  height:100%;
-
-  position: relative;
-}
-
-.about-card img
-{
-  width: 100%;
-  height: 100%;
-}
-
-.secondary-button
-{
-  display:grid;
-  place-content: center;
-  width: var(--primary-button-width);
-  height: var(--primary-button-height);
-  box-shadow: var(--box-dark-shadow);
-
-  background-color: var(--grey);
-  color: var(--basic-color);
-  border: .75px solid var(--card-text);
-  border-radius: var(--border-radius);
-  font-family: var(--buttons-index-font);
-  text-transform: uppercase;
-  font-size: var(--h4-font-size);
-  font-weight: bold;
-  letter-spacing: .5px;
-  cursor: pointer;
-
-  position: absolute;
-  top:80%;
-  right: 30%;
-}
-
-@media screen and (min-width: 810px)
-{
-  .secondary-button
-  {
-    right: 31%;
-  }
-}
-
-@media screen and (min-width: 1024px)
-{
-  .secondary-button
-  {
-    right: 32%;
-  }
-}
-
-.modal-about
-{
-  display: none; /* desactivado por defecto */
-  background-color: var(--background-dark-opacity);
-  border-radius: var(--border-radius);
-  position: absolute;
-  top: 1px;
-  z-index: var(--z-modal);
-  height: 100%;
   width: 100%;
 }
 
-.modal-content
+.about--img-card
 {
-  display:flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  min-width: 300px;
+  min-height: 300px;
+  background-image: url("../images/under-construction.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.section
+@media screen and (min-width: 768px)
 {
-  width: 90%;
-  background-color: var(--about-modal-background);
-  border-radius: var(--border-radius);
-}
-
-
-.about-subtitle
-{
-  text-align: center;
-  padding: 4px 8px;
-
-  font-family: var(--title-font);
-  font-size: var(--h3-font-size);
-}
-
-.icons-wrapper
-{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.svg-wrapper
-{
-  width: 36px;
-  padding: 8px 8px;
-  display:flex;
-  justify-content: space-around;
-  align-content: center;
-}
-
-.item
-{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.text-wrapper
-{
-  height: calc(100% - 8px);
-  display:flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-content: center;
-
-  padding: var(--basic-padding);
-  border-radius: var(--border-radius);
-
-  font-family: var(--body-font);
-  font-size: var(--normal-font);
-  line-height: var(--body-line-height);
-  background-color: var(--text-background);
-  position: relative;
-}
-
-@media screen and (min-width: 810px)
-{
-  .text-wrapper
+  .about--img-card
   {
-    justify-content: space-evenly;
-  }
-}
-
-.text-wrapper p a  /* link to contact page */
-{
-  text-decoration: underline;
-  font-weight: bold;
-  color: var(--dark);
-}
-
-
-.secondary-button a
-{
-  text-decoration: none;
-  color: var(--basic-color);
-  display:block;
-  width: 100%;
-}
-
-.second-btn
-{
-  display:block;
-  width: 80px;
-  text-align: center;
-  position:absolute;
-
-  top:88%;
-  right: 36%;
-  background-color: var(--grey);
-  box-shadow: var(--box-dark-shadow);
-  border-radius: var(--border-radius);
-  color: var(--dark);
-  font-family: var(--buttons-index-font);
-  font-size: var(--h4-font-size);
-  font-weight: bold;
-  letter-spacing: .5px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 810px)
-{
-  .second-btn
-  {
-    display:block;
-    width: 80px;
-    text-align: center;
-    position:absolute;
-    right: 3%;
+    min-width: 450px;
+    min-height: 450px;
   }
 }
