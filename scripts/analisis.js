@@ -140,7 +140,7 @@ const mode = document.getElementById('mode-button');
 const salaryInput = document.getElementById('salary-input');
 salaryInput.addEventListener('keydown', (e) => 
 {
-  if (e.key == "Enter")
+  if (e.key == "Enter" )
   {
     newItemList(salaryInput, list);
     salaryInput.value = "";

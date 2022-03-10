@@ -6,7 +6,7 @@ let gasto = [0];        // List Gasto
 // Funciones para agregar items
 function nuevoIngreso (monto)
 {
-  if (monto !== 0 & monto === Number)
+  if (monto !== 0)
   {
     ingresoTotal.push(monto);
     const container = document.getElementById('income-field-id'); // Div container
@@ -41,7 +41,7 @@ function nuevoIngreso (monto)
 
 function nuevoGasto (monto) 
 {
-  if (monto !== 0 & monto === Number)
+  if (monto !== 0 )
   {
     gasto.push(monto);
     const container = document.getElementById('expense-field-id'); 
@@ -95,9 +95,36 @@ const deleteGasto = (el) =>
 // Funcion leer input event
 function input ()
 {
-  const input = Number(document.getElementById("input-calculator-field").value);
-  return input;
+  const number = Number(document.getElementById("input-calculator-field").value);
+  return number
+} 
+
+
+// Funcion input Keycode
+
+function inputKeyCode ()
+{
+  const input = document.getElementById("input-calculator-field").value;
 }
+
+document.addEventListener("keypress", function onEvent(event) {
+  
+  if (event.key === "Enter") {
+    input();
+  }
+  else if (event.key === "+")
+  {
+    nuevoIngreso (input())
+  }
+  else if (event.key === "-")
+  {
+    nuevoGasto (input());
+  }
+  else
+  {
+    return null;
+  }
+});
 
 // Funciones para sumar
 const suma = (a ,b) => a + b;
@@ -216,5 +243,3 @@ btnAddIncome.addEventListener('click', sumarIngresos);
 btnAddExpense.addEventListener('click', sumarGastos);
 btnAddExpense.addEventListener('click', balance);
 btnAddIncome.addEventListener('click', balance);
-
-

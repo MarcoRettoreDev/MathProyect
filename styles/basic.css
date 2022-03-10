@@ -169,6 +169,7 @@ body
   color:var(--basic-color);
   font-family: var(--buttons-index-font);
   font-size:var(--h1-font-size);
+  text-align: center;
 }
 
 .subtitle
