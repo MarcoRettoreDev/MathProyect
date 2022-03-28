@@ -31,6 +31,7 @@ function nuevoIngreso (monto)
     div.appendChild(p); // agregamos el hijo a nuestra lista
     div.appendChild(img);
 
+    balance();
     clearInput(); // Borramos el contenido del input
   }
   else
@@ -62,7 +63,8 @@ function nuevoGasto (monto)
     
     div.appendChild(p); 
     div.appendChild(img);
-  
+    
+    balance();
     clearInput(); 
   }
   else
@@ -96,21 +98,14 @@ const deleteGasto = (el) =>
 function input ()
 {
   const number = Number(document.getElementById("input-calculator-field").value);
-  return number
-} 
-
+  return number;
+}
 
 // Funcion input Keycode
 
-function inputKeyCode ()
-{
-  const input = document.getElementById("input-calculator-field").value;
-}
-
 document.addEventListener("keypress", function onEvent(event) {
-  
-  if (event.key === "Enter") {
-    input();
+  if (event.key == "Enter") {
+    nuevoIngreso(input());
   }
   else if (event.key === "+")
   {
@@ -119,10 +114,6 @@ document.addEventListener("keypress", function onEvent(event) {
   else if (event.key === "-")
   {
     nuevoGasto (input());
-  }
-  else
-  {
-    return null;
   }
 });
 
@@ -167,7 +158,7 @@ function balance()
   const ingresos = sumarIngresos();
   const field = document.getElementById("balance-total-field");
   const resultado = ingresos - gastos;
-  field.innerText = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`;
+  field.innerText = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`; // Imprime hasta 2 digitos de fracción
   return resultado;
 };
 

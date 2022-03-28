@@ -4,36 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/normalize.css">
   <link rel="stylesheet" href="/styles/basic.css">
   <link rel="stylesheet" href="/styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title> Web Portfolio | Mr Dev</title>
 </head>
 <body>
-  
   <header class="header">
     <div class="menu-icon">
       <figure>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4.5 24 24" height="100%" fill="#DEDCE5" id="menu-burger"><path d="M8 11.243l3.95-3.95a1 1 0 1 1 1.414 1.414l-5.657 5.657a.997.997 0 0 1-1.414 0L.636 8.707A1 1 0 1 1 2.05 7.293L6 11.243V1.657a1 1 0 1 1 2 0v9.586z"></path></svg>
+        <svg height='100%' id="menu-burger" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </figure>
     </div>
     <nav class="navbar-content">
-      <div class="home-content">
-        <div class="img-logo-container">
-          <img src="/images/logo demo.png" alt="">
-        </div>
+      <div class="proyects-content">
+        <a href="/index.html" class="btn-index animated-button thar-two"> <span>Home</span></a>
       </div>
       <div class="proyects-content">
-        <a href="/pages/projects.html" class="btn-index animated-button thar-two"> <span>Projects</span></a>
+        <a href="/pages/promedios.html" class="btn-index animated-button thar-two"> <span>Mean Med Mode</span></a>
       </div>
-      <div class="about-content">
-        <a href="/pages/about.html" class="btn-index animated-button thar-three"> <span>About</span></a>
+      <div class="proyects-content">
+        <a href="/pages/discounts.html" class="btn-index animated-button thar-three"> <span>Discounts</span></a>
       </div>
-      <div class="contact-content">
-        <a href="/pages/contact.html" class="btn-index animated-button thar-four"> <span>Contact</span></a>
+      <div class="proyects-content">
+        <a href="/pages/ingresoMensual.html" class="btn-index animated-button thar-four"> <span>Income/Expense</span></a>
+      </div>
+      <div class="proyects-content">
+        <a href="/pages/figuras.html" class="btn-index animated-button thar-four"> <span>Figures</span></a>
       </div>
       <span class="menu-close">&times; </span>
     </nav>
@@ -43,20 +43,44 @@
           <a href="/index.html">Home</a>
         </li>
         <li>
-          <a href="/pages/projects.html"> Projects</a>
+          <a href="/pages/promedios.html"> Mean Med Mode</a>
         </li>
         <li>
-          <a href="/pages/about.html"> About</a>
+          <a href="/pages/discounts.html"> Discounts </a>
         </li>
         <li>
-          <a href="/pages/contact.html"> Contact</a>
+          <a href="/pages/ingresoMensual.html"> Income/Expense</a>
+        </li>
+        <li>
+          <a href="/pages/figuras.html"> Figures</a>
         </li>
         <span class="menu-close">&times; </span>
       </ol>
     </div>
   </header>
-  <section class="index-wrapper">
+  <section class="index__wrapper">
+    <h1 class='title'> Welcome to Maths Tool</h1>
+    <div class="index__text-wrapper">
+      <div class="text-wrapper_what">
+        <h2 class="subtitle">What is this?</h2>
+        <p class="text">This is a personal project, on this page you will find a few maths tools to calculate some operations such as:</p>
+        <ul>
+          <li>Discounts Calculator</li>
+          <li>Income and Expense Register</li>
+          <li>Mean Median & Mode</li>
+          <li>Figures area & perimeter</li>
+        </ul>
+      </div>
+      <div class="text-wrapper_why">
+        <h2 class="subtitle">Why i did this?</h2>
+        <p class="text">This page was build to show what i can do and demonstrate my intentions to learn more and continue to improving my code skills, also it was a great project to use my knowledge from college</p>
+      </div>
+    </div>
 
+    <div class="index__logo-wrapper">
+      <p class="text"> Made With ♥ by</p>
+      <img src="./images/logo demo.png" alt="Logo Marco Rettore Dev">
+    </div>
   </section>
   <script src="/scripts/index.js"></script>
 </body>
