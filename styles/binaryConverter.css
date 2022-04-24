@@ -1,0 +1,64 @@
+/* Text */
+
+.text-binary-field
+{
+  margin-top: var(--section-spacing);
+}
+
+/* card wrapper */
+.binary-wrapper
+{
+  height: 400px;
+  width: 80%;
+  max-width: 320px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--section-spacing) auto;
+  
+  font-size: var(--normal-font-size);
+  color:var(--white);
+
+  border: 1px solid white;
+  border-radius: var(--border-radius);
+}
+
+.input-binary-section
+{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-binary
+{
+  text-align: center;
+  width: 20px;
+}
+
+/* Result field */
+
+#result-binary,
+#result-decimal
+{
+  max-width: 200px;
+  overflow-wrap: break-word;
+  min-height: 2em;
+  padding: .5em 0;
+  text-align: center;
+}
+
+/* Buttons */ 
+
+.btn-get-number
+{
+  width: 36px;
+}
+
+.btn-clear-wrapper
+{
+  width: 36px;
+}
