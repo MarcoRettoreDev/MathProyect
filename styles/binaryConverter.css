@@ -17,11 +17,14 @@
   justify-content: space-around;
   align-items: center;
   margin: var(--section-spacing) auto;
-  
-  font-size: var(--normal-font-size);
-  color:var(--white);
+  padding: 1em .5em;
 
-  border: 1px solid white;
+  font-size: var(--normal-font-size); 
+  font-family: var(--body-font);
+  font-weight: 700;
+  color:var(--basic-color);
+
+  box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
 

@@ -1,45 +1,68 @@
 /* Main functions */
 var arrayNumber = []; // Array con los numeros ingresados 
 
-const inputlist = () =>
+function inputlist () 
 {
-
-  let number = document.getElementById('input-binary').value; /* numero */ 
-  arrayNumber.unshift(`${number}`); /* insertamos numero en lista */
-  let resetInput = document.getElementById('input-binary').value = ""; /*reseteamos el valor */
-  resetInput; /*ejecutamos la funcion */
-
-  const sumaLista = []; // valores a sumar
-
-  arrayNumber.forEach((numb, index)=>
+  let number = Number(document.getElementById('input-binary').value); /* numero */ 
+  if(number === 1 | number === 0) // Comprobamos que el numero sea un binario
   {
-    let calculo = numb * (2 **index); // hacemos el calculo de cada numero por su posición
-    sumaLista.push(calculo);
-  });
+    arrayNumber.unshift(`${number}`); /* insertamos numero en lista */
+    let resetInput = document.getElementById('input-binary').value = ""; /*reseteamos el valor */
+    resetInput; /*ejecutamos la funcion */
 
-  let decimalTotal = sumaLista.reduce((a ,b)=> 
+    // Creamos un array vacio para ir creando nuestra suma compuesta
+    const sumaLista = [];
+
+    // hacemos el calculo de cada numero por su posición
+    arrayNumber.forEach((numb, index)=>
+    {
+      let calculo = numb * (2 **index); 
+      sumaLista.push(calculo);
+    });
+
+    // Hacemos un reduce para sumar todos los elementos de la lista y obtener el numero
+    let decimalTotal = sumaLista.reduce((a ,b)=> 
+    {
+      const suma = a + b ; 
+      return suma
+    }, 0);
+
+    let binaryTotal = arrayNumber.reduce((a ,b)=> 
+    {
+      const suma = b + a ; 
+      return suma
+    });
+    
+    // imprimimos el resultado
+    const printResult = () =>
+    {
+      const field = document.getElementById('result-decimal');
+      field.innerText = `${decimalTotal}`; 
+
+      const field2 = document.getElementById('result-binary');
+      field2.innerText = `${binaryTotal}`;
+    }
+    return printResult();
+  }
+  else
   {
-    const suma = a + b ; // Hacemos un reduce para sumar todos los elementos de la lista y obtener el numero
-    return suma
-  }, 0);
-
-  let binaryTotal = arrayNumber.reduce((a ,b)=> 
-  {
-    const suma = b + a ; 
-    return suma
-  });
-
-  // imprimimos el resultado
-  const field = document.getElementById('result-decimal');
-  field.innerText = `${decimalTotal}`; 
-
-  const field2 = document.getElementById('result-binary');
-  field2.innerText = `${binaryTotal}`;
+    const field2 = document.getElementById('result-binary');
+    field2.innerText = `Failed: you have to insert only 1 or 0 numbers;`; 
+  }
 }
 
-const eventBackspace = (event) =>
+/* Manejador de eventos */
+const eventHandler = (event) =>
 {
-  let number = document.getElementById('input-decimal');
+  function clearLastDigit() 
+  {
+    arrayNumber.pop(0)
+  }
+
+  if(event.key == 'Backspace')
+  {
+    clearLastDigit();
+  }
 }
 
 function clearDiscount()
@@ -59,7 +82,6 @@ function clearDiscount()
 const input1 = document.getElementById('input-binary');
 input1.addEventListener('input', inputlist);
 
-// inputBackspace.addEventListener('input', eventBackspace);
 
 const btn = document.getElementById('clear-all');
 btn.addEventListener("click" ,clearDiscount);

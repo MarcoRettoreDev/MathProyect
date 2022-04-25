@@ -30,6 +30,9 @@
         <a href="../pages/discounts.html" class="btn-index animated-button thar-three"> <span>Discounts</span></a>
       </div>
       <div class="proyects-content">
+        <a href="../pages/binaryConverter.html" class="btn-index animated-button thar-three"> <span>Binary converter</span></a>
+      </div>
+      <div class="proyects-content">
         <a href="../pages/ingresoMensual.html" class="btn-index animated-button thar-four"> <span>Income/Expense</span></a>
       </div>
       <div class="proyects-content">
@@ -49,6 +52,9 @@
           <a href="../pages/discounts.html"> Discounts </a>
         </li>
         <li>
+          <a href="../pages/binaryConverter.html"> Binary converter </a>
+        </li>
+        <li>
           <a href="../pages/ingresoMensual.html"> Income/Expense</a>
         </li>
         <li>
@@ -65,7 +71,7 @@
     <div class="binary-wrapper">
       <div class="input-binary-section">
         <label for="input-binary">Enter the binary:</label>
-        <input type="number" class="input-binary" id="input-binary">
+        <input onkeydown="eventHandler(event)" type="number" class="input-binary" id="input-binary">
       </div>
       <p>Binary number:</p>
       <div class="result-binary-field">
