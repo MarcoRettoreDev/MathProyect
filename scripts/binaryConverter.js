@@ -37,7 +37,7 @@ function inputlist ()
     const printResult = () =>
     {
       const field = document.getElementById('result-decimal');
-      field.innerText = `${decimalTotal}`; 
+      field.innerText = `${decimalTotal.toLocaleString('es-ES')}`; 
 
       const field2 = document.getElementById('result-binary');
       field2.innerText = `${binaryTotal}`;

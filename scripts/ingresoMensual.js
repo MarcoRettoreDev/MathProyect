@@ -19,7 +19,7 @@ function nuevoIngreso (monto)
     container.append(div); // pegamos el DIV como primer hijo del container
     // p
     const p = document.createElement('p') // creamos un nuevo elemento p
-    p.textContent = monto; // añadimos el texto al elemento p
+    p.textContent = monto.toLocaleString('es-ES'); // añadimos el texto al elemento p
     p.setAttribute('id', 'income-value') // añadimos el id para poder borrar el elemento
 
     // img
@@ -54,7 +54,7 @@ function nuevoGasto (monto)
     container.append(div); 
   
     const p = document.createElement('p') 
-    p.textContent = monto;
+    p.textContent = monto.toLocaleString('es-ES');
   
     img.setAttribute('type', 'image'); 
     img.setAttribute('class', 'btn-close'); 
@@ -124,7 +124,7 @@ function sumarIngresos() // suma todos los ingresos de la lista
 {
   let resultado = ingresoTotal.reduce((a ,b)=> a + b);
   const field = document.getElementById('income-total-field')
-  field.textContent = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`;
+  field.textContent = `$ ${(Math.round(resultado * 100) / 100).toFixed(2)}`;
   return resultado;
 };
 
@@ -132,7 +132,7 @@ function sumarGastos() // suma todos los gastos de la lista
 {
   let resultado = gasto.reduce((a ,b)=> a + b);
   const field = document.getElementById('expense-total-field')
-  field.textContent = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`;
+  field.textContent = `$ ${(Math.round(resultado * 100) / 100).toFixed(2)}`;
   return resultado;
 };
 
@@ -158,7 +158,7 @@ function balance()
   const ingresos = sumarIngresos();
   const field = document.getElementById("balance-total-field");
   const resultado = ingresos - gastos;
-  field.innerText = `$${(Math.round(resultado * 100) / 100).toFixed(2)}`; // Imprime hasta 2 digitos de fracción
+  field.innerText = `$ ${(Math.round(resultado * 100) / 100).toFixed(2)}`; // Imprime hasta 2 digitos de fracción
   return resultado;
 };
 
@@ -200,13 +200,6 @@ function clearAll ()
   clearInput (); // limpia el input
 }
 
-// Porcentaje
- 
-const calcularPorcentaje = (ingresos, gastos) =>
-{
-  const calc = (100*gastos)/ingresos;
-  return calc; // retorna el porcentaje en numero entero. (agregar '%' )
-};
 
 // HTML INPUTS
 
