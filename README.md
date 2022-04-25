@@ -1,19 +1,36 @@
-# MathProyect V 1.0 | Mr. Dev
+# MathProyect V 1.1 | Mr. Dev
 
 ## Made with: 
-* HTML
-* CSS
-* JS
+![](https://i.ibb.co/0Yhbsvk/file-html-solid-24.png)  ![](https://i.ibb.co/Wzt9G5B/file-css-solid-24.png)  ![](https://i.ibb.co/Bf217qL/file-js-solid-24.png)
 
-#
 
 ## Resume
 This proyect envolves diferentes mini-projects inside, all around the math theme, you can find some apps to help you to, as an example, calculate the % of discounts over a price or calculate m² of your flat.
 #
+
+
+Desktop version
+-------------
+![](https://i.ibb.co/fNYPkSC/Desktop-Version.jpg)
+
+
+Mobile version
+-------------
+![](https://i.ibb.co/8P6KHBn/Mobile-Version.jpg)
+
+
+Tablet version
+-------------
+![](https://i.ibb.co/swJ1gzq/Tablet-Version.jpg)
+
+
 ## Sections:
 
 ### Discounts calculator
-In this page you can easily calculate the discounts on a price. Its very easy to use and simple to run.
+On this page you can easily calculate the discounts on a price. Its very easy to use and simple to run.
+
+### Binary Converter
+A simple converter from binary numbers to decimal.
 
 ### Geometry calculator
 
